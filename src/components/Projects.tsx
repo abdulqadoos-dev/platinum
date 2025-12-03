@@ -11,25 +11,31 @@ const categories = [
 
 const projects = [
   {
-    title: "Current Jobs",
+    title: "Mainline Rehabilitation",
     description:
-      "Lorem Ipsum Dolor Sit Amet Consectetur. Ac Ipsum Vulputate Ultricies A Tellus. Sit Sed Massa Orci Nunc Congue. Mi Faucibus Dui Diam Tortor Dictumst.",
-    image:
-      "https://images.unsplash.com/photo-1529429617124-aee969ab6f00?auto=format&fit=crop&w=900&q=80",
+      "Ballast renewal and track surfacing across 25 km to restore ride quality, drainage, and uptime for unit trains.",
+    image: "/CP Rail.jpg",
   },
   {
-    title: "Current Jobs",
+    title: "Yard Expansion",
     description:
-      "Lorem Ipsum Dolor Sit Amet Consectetur. Ac Ipsum Vulputate Ultricies A Tellus. Sit Sed Massa Orci Nunc Congue. Mi Faucibus Dui Diam Tortor Dictumst.",
+      "New turnouts, ladder tracks, and signal upgrades to increase yard capacity and reduce dwell time.",
     image:
-      "https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Current Jobs",
+    title: "Bridge Approaches",
     description:
-      "Lorem Ipsum Dolor Sit Amet Consectetur. Ac Ipsum Vulputate Ultricies A Tellus. Sit Sed Massa Orci Nunc Congue. Mi Faucibus Dui Diam Tortor Dictumst.",
+      "Track realignment and approach stabilization on a critical river crossing to improve safety and reliability.",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Industrial Spur Construction",
+    description:
+      "Design-build of a new industrial spur with grading, drainage, and surfacing to connect a client site to the mainline.",
+    image:
+      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
