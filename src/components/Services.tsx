@@ -70,13 +70,13 @@ export default function Services() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div className="grid gap-5 items-end grid-cols-1 md:grid-cols-12">
+        <div className="grid gap-5 items-start md:items-end grid-cols-1 md:grid-cols-12">
 
-          <div className="md:col-span-4 ">
+          <div className="md:col-span-4 md:pr-16 relative">
 
-            <p className="text-4xl md:text-5xl lg:text-7xl leading-15 font-black text-primary mb-4 uppercase relative">
+            <p className="text-4xl sm:text-5xl lg:text-7xl leading-tight sm:leading-[1.05] lg:leading-[1.1] font-black text-primary mb-4 uppercase relative">
               Our
-              <span className="absolute top-2 px-3 leading-5 py-1 bg-secondary font-semibold inline-block text-base text-white">
+              <span className="inline-block w-full max-w-xs sm:max-w-sm mb-2 px-3 leading-5 py-1 bg-secondary font-semibold text-sm sm:text-base text-white md:w-auto md:mb-0 md:absolute md:top-2 md:left-0">
                 Full Rail <br /> Management
               </span>
               <br />
@@ -88,19 +88,19 @@ export default function Services() {
           </div>
 
           <div className="md:col-span-8">
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {serviceFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex h-full flex-col gap-2 rounded-10 border border-secondary p-3"
+                  className="flex h-full flex-col gap-3 rounded-10 border border-secondary p-4 sm:p-5"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-white">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg md:text-xl leading-5 font-black uppercase text-primary">
                     {feature.title}
                   </h3>
-                  <p className="text-xs leading-snug text-black capitalize font-normal">
+                  <p className="text-sm leading-snug text-black capitalize font-normal">
                     {feature.description}
                   </p>
                 </div>
@@ -110,23 +110,23 @@ export default function Services() {
         </div>
 
         <div className="mt-8 sm:mt-12 md:mt-16">
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4">
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible lg:snap-none">
 
             {serviceCards.map((service) => (
               <div
                 key={service.title}
-                className="group relative flex-shrink-0 w-[calc(50%-8px)] sm:w-[calc(33.333%-12px)] md:w-[calc(25%-12px)] lg:w-[280px]"
+                className="group relative flex-shrink-0 min-w-[80%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-0 lg:w-auto snap-start"
               >
-                <div className="relative h-[300px] sm:h-[380px] md:h-[420px] lg:h-[420px] overflow-hidden rounded-3xl">
+                <div className="relative aspect-[3/4] sm:aspect-[5/6] lg:aspect-[3/4] overflow-hidden rounded-3xl">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                    sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 20vw"
                     className="object-cover transition duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-3xl" />
-                  <button className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-secondary shadow-lg">
+                  <button className="absolute right-3 top-3 md:right-4 md:top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-secondary shadow-lg">
                     <span className="sr-only">View more</span>
                     <svg
                       width="20"

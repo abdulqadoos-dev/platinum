@@ -37,7 +37,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-transparent"></div>
 
-      <div className="relative z-20 container mx-auto h-full flex flex-col justify-around border md:px-0 px-5">
+      <div className="relative z-20 container mx-auto h-full flex flex-col justify-around  md:px-0 px-5">
 
         <h1 className="relative text-4xl md:text-6xl lg:text-8xl leading-9 md:leading-22  font-black tracking-tight text-primary inline-block">
           RAILWAY <span className="absolute bg-secondary px-2 md:px-5 text-xl md:text-7xl top-1 md:top-3 leading-titght text-white inline-block font-bold ">Construction</span>
@@ -45,7 +45,7 @@ export default function Hero() {
           YOU CAN TRUST
         </h1>
 
-        <div className="w-fit  bg-white/95 rounded-xl py-3 ">
+        <div className="w-fit bg-white/95 rounded-xl py-3 ">
           <p className="text-center text-primary font-semibold text-xs sm:text-base ">Our Partners</p>
           <div className="flex items-center justify-center">
             {[0, 1].map((offset) => {

@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
         {/* Logo */}
         <a className="flex items-center " href="/#home" >
-          <Image src="/logo.png" width={140} height={45} alt="Platinum Track Services Logo" className="w-auto h-auto" priority />
+          <Image src="/logo.png" width={140} height={45} alt="Platinum Track Services Logo" className="w-28 sm:w-32 lg:w-[140px] h-auto" priority />
         </a>
 
         {/* Desktop Navigation */}
@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="flex flex-col h-full px-6 py-8">
           {/* Header with Logo and Close Button */}
           <div className="flex items-center justify-between mb-8">
-            <Image src="/logo.png" width={120} height={40} alt="Platinum Track Services Logo" className="w-auto h-auto" />
+            <Image src="/logo.png" width={120} height={40} alt="Platinum Track Services Logo" className="w-24 sm:w-28 lg:w-[120px] h-auto" />
             <button
               onClick={() => setIsOpen(false)}
               className="p-2 text-secondary hover:text-primary transition"
