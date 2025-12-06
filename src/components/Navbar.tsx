@@ -21,12 +21,12 @@ export default function Navbar() {
           {[
             { label: "Services", href: "/#services" },
             { label: "Projects", href: "/#projects" },
-            { label: "Indigenous Engagement", href: "/indigenous-engagement" },
             { label: "Safety", href: "/#safety" },
             { label: "Equipments", href: "/#equipments" },
             { label: "About Us", href: "/#about" },
+            { label: "Indigenous Engagement", href: "/indigenous-engagement" },
             { label: "Contact Us", href: "/#contact" },
-            // { label: "Careers", href: "#careers" },
+            { label: "Careers", href: "#careers" },
           ].map((item) => (
             <a
               key={item.label}
@@ -36,7 +36,7 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-        </nav>
+          </nav>
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-[#1C2C4C]"
+          className="lg:hidden p-2 text-secondary"
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@ export default function Navbar() {
             <Image src="/logo.png" width={120} height={40} alt="Platinum Track Services Logo" className="w-auto h-auto" />
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 text-[#1C2C4C] hover:text-primary transition"
+              className="p-2 text-secondary hover:text-primary transition"
               aria-label="Close menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-4 text-lg font-medium text-[#1C2C4C] hover:text-primary transition"
+                className="block py-4 text-lg font-medium text-secondary hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -116,7 +116,7 @@ export default function Navbar() {
           {/* Buttons */}
           <div className="flex flex-col gap-4 mt-auto mb-8">
             <button
-              className="w-full px-6 py-3 border border-[#1C2C4C] rounded-full text-[#1C2C4C] text-sm font-medium hover:bg-[#1C2C4C] hover:text-white transition"
+              className="w-full px-6 py-3 border border-secondary rounded-full text-secondary text-sm font-medium hover:bg-secondary hover:text-white transition"
             >
               Get Quote
             </button>

@@ -37,10 +37,10 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-transparent"></div>
 
-      <div className=" relative z-20 container mx-auto h-full flex flex-col justify-around">
+      <div className="relative z-20 container mx-auto h-full flex flex-col justify-around border md:px-0 px-5">
 
-        <h1 className=" relative text-3xl sm:text-5xl md:text-6xl lg:text-8xl leading-22  font-black tracking-tight text-primary inline-block">
-          RAILWAY <span className="absolute bg-secondary px-5 text-7xl top-3 leading-titght text-white inline-block font-bold ">Construction</span>
+        <h1 className="relative text-5xl md:text-6xl lg:text-8xl leading-12 md:leading-22  font-black tracking-tight text-primary inline-block">
+          RAILWAY <span className="absolute bg-secondary px-5 md:text-7xl top-3 leading-titght text-white inline-block font-bold ">Construction</span>
           <br />
           YOU CAN TRUST
         </h1>
