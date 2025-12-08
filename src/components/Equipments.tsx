@@ -5,6 +5,7 @@ export default function Equipments() {
     <section id="equipments" className="bg-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 text-secondary">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-5 items-start md:items-end grid-cols-1 md:grid-cols-12">
+         
           <div className="md:col-span-5 md:pr-14 relative">
             <p className="text-4xl sm:text-5xl lg:text-7xl leading-tight sm:leading-[1.05] lg:leading-[1.1] font-black text-primary mb-4 uppercase relative">
               Our
@@ -17,6 +18,7 @@ export default function Equipments() {
             <p className="text-lg md:text-2xl lg:text-3xl leading-7 font-semibold text-secondary capitalize">
               We provide a variety of construction services.
             </p>
+            
           </div>
 
           <div className="md:col-span-4">

@@ -37,13 +37,16 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-transparent"></div>
 
-      <div className="relative z-20 container mx-auto h-full flex flex-col justify-around  md:px-0 px-5">
+      <div className="relative z-20 container mx-auto h-full flex flex-col justify-around  lg:px-0 px-5">
 
-        <h1 className="relative text-4xl md:text-6xl lg:text-8xl leading-tight md:leading-[1.1] font-black tracking-tight text-primary inline-block">
-          RAILWAY <span className="absolute bg-secondary px-2 md:px-5 text-sm lg:text-7xl top-2 md:top-3 leading-8 text-white inline-block font-bold uppercase">Construction</span>
-          <br />
-          YOU CAN TRUST
-        </h1>
+
+        <div className="flex flex-col w-full">
+          <div className="flex items-center">
+            <h1 className="text-3xl md:text-5xl lg:text-8xl text-primary font-extrabold uppercase">Railway</h1>
+            <p className="bg-secondary text-white px-2 uppercase font-bold text-sm md:text-3xl lg:text-6xl lg:py-1">construction</p>
+          </div>
+          <h1 className="text-3xl md:text-5xl lg:text-8xl text-primary font-extrabold uppercase">you can trust</h1>
+        </div>
 
         <div className="w-fit bg-white/95 rounded-xl py-3 ">
           <p className="text-center text-primary font-semibold text-xs sm:text-base ">Our Partners</p>

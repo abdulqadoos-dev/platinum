@@ -72,23 +72,35 @@ export default function Services() {
 
         <div className="grid gap-5 items-start md:items-end grid-cols-1 md:grid-cols-12">
 
-          <div className="md:col-span-4 md:pr-16 relative">
+          <div className="col-span-12 lg:col-span-4 md:pr-16 ">
 
-            <p className="text-4xl sm:text-5xl lg:text-7xl leading-tight sm:leading-[1.05] lg:leading-[1.1] font-black text-primary mb-4 uppercase relative">
-              Our
-              <span className="absolute bg-secondary px-2 md:px-5 text-sm md:text-7xl top-2 md:top-3 leading-8 text-white inline-block font-bold ">
-                Full Rail <br className="hidden sm:block"/> Management
-              </span>
+            {/* <h1 className="relative uppercase  w-full text-4xl md:text-6xl lg:text-8xl leading-9 md:leading-22  font-black tracking-tight text-primary inline-block">
+              Our <span className="absolute bg-secondary px-3  md:px-5 text-lg w-fit md:text-7xl top-1 md:top-3 leading-titght text-white inline-block font-bold ">Full Rail <br className="hidden sm:block" /> Management</span>
               <br />
               Services
-            </p>
-            <p className="text-lg md:text-2xl lg:text-3xl leading-7 font-semibold text-secondary capitalize">
-              We provide a variety of construction services.
-            </p>
+            </h1> */}
+
+
+
+            <div className="flex flex-col w-full">
+              <div className="flex items-center">
+                <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Our</h1>
+                <p className="bg-secondary text-white px-2 uppercase font-bold text-xs md:leading-3 py-1">Full Rail <br className="hidden sm:block" /> Management</p>
+              </div>
+
+              <h1 className="text-3xl md:text-5xl lg:text-8xl text-primary font-extrabold uppercase">Services</h1>
+              <p className="text-lg md:text-2xl lg:text-3xl leading-7 font-semibold text-secondary capitalize">
+                We provide a variety of construction services.
+              </p>
+
+            </div>
+
+
+
           </div>
 
-          <div className="md:col-span-8">
-            <div className="grid gap-4 sm:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="col-span-12 lg:col-span-8 ">
+            <div className="grid gap-4 sm:gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
               {serviceFeatures.map((feature) => (
                 <div
                   key={feature.title}
