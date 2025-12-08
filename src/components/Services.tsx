@@ -74,22 +74,16 @@ export default function Services() {
 
           <div className="col-span-12 lg:col-span-4 md:pr-16 ">
 
-            {/* <h1 className="relative uppercase  w-full text-4xl md:text-6xl lg:text-8xl leading-9 md:leading-22  font-black tracking-tight text-primary inline-block">
-              Our <span className="absolute bg-secondary px-3  md:px-5 text-lg w-fit md:text-7xl top-1 md:top-3 leading-titght text-white inline-block font-bold ">Full Rail <br className="hidden sm:block" /> Management</span>
-              <br />
-              Services
-            </h1> */}
-
 
 
             <div className="flex flex-col w-full">
               <div className="flex items-center">
-                <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Our</h1>
-                <p className="bg-secondary text-white px-2 uppercase font-bold text-xs md:leading-3 py-1">Full Rail <br className="hidden sm:block" /> Management</p>
+                <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">Our</h1>
+                <p className="bg-secondary text-white px-2 uppercase   font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Full Rail <br className="hidden sm:block" /> Management</p>  
               </div>
 
-              <h1 className="text-3xl md:text-5xl lg:text-8xl text-primary font-extrabold uppercase">Services</h1>
-              <p className="text-lg md:text-2xl lg:text-3xl leading-7 font-semibold text-secondary capitalize">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Services</h1>
+              <p className="text-lg md:text-xl lg:text-2xl leading-none  font-semibold text-secondary capitalize">
                 We provide a variety of construction services.
               </p>
 
