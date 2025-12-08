@@ -76,8 +76,8 @@ export default function Services() {
 
             <p className="text-4xl sm:text-5xl lg:text-7xl leading-tight sm:leading-[1.05] lg:leading-[1.1] font-black text-primary mb-4 uppercase relative">
               Our
-              <span className="inline-block w-full max-w-xs sm:max-w-sm mb-2 px-3 leading-5 py-1 bg-secondary font-semibold text-sm sm:text-base text-white md:w-auto md:mb-0 md:absolute md:top-2 md:left-0">
-                Full Rail <br /> Management
+              <span className="absolute bg-secondary px-2 md:px-5 text-sm md:text-7xl top-2 md:top-3 leading-8 text-white inline-block font-bold ">
+                Full Rail <br className="hidden sm:block"/> Management
               </span>
               <br />
               Services
