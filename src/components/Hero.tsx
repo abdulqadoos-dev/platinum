@@ -39,8 +39,8 @@ export default function Hero() {
 
       <div className="relative z-20 container mx-auto h-full flex flex-col justify-around  md:px-0 px-5">
 
-        <h1 className="relative text-4xl md:text-6xl lg:text-8xl leading-9 md:leading-22  font-black tracking-tight text-primary inline-block">
-          RAILWAY <span className="absolute bg-secondary px-2 md:px-5 text-xl md:text-7xl top-1 md:top-3 leading-titght text-white inline-block font-bold ">Construction</span>
+        <h1 className="relative text-4xl md:text-6xl lg:text-8xl leading-tight md:leading-[1.1] font-black tracking-tight text-primary inline-block">
+          RAILWAY <span className="absolute bg-secondary px-2 md:px-5 text-xl md:text-7xl top-1 md:top-3 leading-tight text-white inline-block font-bold ">Construction</span>
           <br />
           YOU CAN TRUST
         </h1>

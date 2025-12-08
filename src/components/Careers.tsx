@@ -93,7 +93,6 @@ export default function Careers() {
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     className="rounded-xl object-cover"
-                    priority
                   />
                 </div>
                 <h3 className="text-primary text-2xl font-bold mb-2">

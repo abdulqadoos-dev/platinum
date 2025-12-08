@@ -11,6 +11,11 @@ export default function GetInTouch() {
     contact: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({ type: "idle", message: "" });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -20,17 +25,34 @@ export default function GetInTouch() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      service: "",
-      contact: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" });
+
+    try {
+      // Placeholder async call; replace with real API request when available.
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      setStatus({
+        type: "success",
+        message: "Thanks for reaching out. We received your message and will respond soon.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        service: "",
+        contact: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Contact form error:", error);
+      setStatus({
+        type: "error",
+        message: "We could not send your message. Please try again in a moment.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
@@ -118,7 +140,7 @@ export default function GetInTouch() {
                 Let's Work Together
               </span>
 
-              <p className="text-4xl md:text-5xl lg:text-7xl leading-15 font-black text-primary mb-4">
+              <p className="text-4xl md:text-5xl lg:text-7xl leading-tight md:leading-[1.1] font-black text-primary mb-4">
                 GET IN TOUCH
               </p>
 
@@ -167,6 +189,7 @@ export default function GetInTouch() {
                     id="service"
                     value={formData.service}
                     onChange={handleChange}
+                    required
                     className="border border-secondary rounded-full px-4 py-2 w-full bg-transparent focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                   >
                     <option value="" disabled>
@@ -194,9 +217,10 @@ export default function GetInTouch() {
               </div>
 
               <div>
-                <label htmlFor="service" className="text-sm font-semibold px-3">Message</label>
+                  <label htmlFor="message" className="text-sm font-semibold px-3">Message</label>
                 <textarea
                   name="message"
+                  id="message"
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
@@ -206,25 +230,37 @@ export default function GetInTouch() {
               </div>
 
               <div className="flex justify-end">
-                <button
-                  type="submit"
-                  className="flex items-center space-x-2 bg-transparent border border-secondary shadow px-6 py-2 rounded-full text-secondary hover:bg-secondary hover:text-white transition"
-                >
-                  <span className="text-secondary font-semibold hover:text-white">
-                    Send Message
-                  </span>
-                  <svg
-                    width="21"
-                    height="21"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 21 21"
+                <div className="flex flex-col items-end gap-3" aria-live="polite">
+                  {status.type !== "idle" && (
+                    <p
+                      className={`text-sm font-semibold ${
+                        status.type === "success" ? "text-primary" : "text-red-600"
+                      }`}
+                    >
+                      {status.message}
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="flex items-center space-x-2 bg-transparent border border-secondary shadow px-6 py-2 rounded-full text-secondary hover:bg-secondary hover:text-white transition disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <path d="M14.4785 10.4999L10.2094 14.769M14.4785 10.4999L10.2094 6.23082M14.4785 10.4999L6.99907 10.5M0.5 10.5C0.5 4.97715 4.97715 0.5 10.5 0.5C16.0228 0.5 20.5 4.97715 20.5 10.5C20.5 16.0228 16.0228 20.5 10.5 20.5C4.97715 20.5 0.5 16.0228 0.5 10.5Z" />
-                  </svg>
-                </button>
+                    <span className="text-secondary font-semibold hover:text-white">
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </span>
+                    <svg
+                      width="21"
+                      height="21"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      viewBox="0 0 21 21"
+                    >
+                      <path d="M14.4785 10.4999L10.2094 14.769M14.4785 10.4999L10.2094 6.23082M14.4785 10.4999L6.99907 10.5M0.5 10.5C0.5 4.97715 4.97715 0.5 10.5 0.5C16.0228 0.5 20.5 4.97715 20.5 10.5C20.5 16.0228 16.0228 20.5 10.5 20.5C4.97715 20.5 0.5 16.0228 0.5 10.5Z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </form>
           </div>

@@ -88,83 +88,78 @@ const LocationIcon = () => (
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-[#0E0F47] text-white px-6 lg:px-24 py-20">
+    <footer id="footer" className="bg-[#0E0F47] text-white px-6 sm:px-8 lg:px-24 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl xl:max-w-7xl">
 
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
-
-          <div className="col-span-1">
+        <div className="grid gap-10 lg:grid-cols-4 text-left">
+          <div className="space-y-6 lg:col-span-1">
             <Image
               src="/logo-white.png"
               alt="Platinum Track logo"
               width={160}
               height={60}
-              className="h-20 w-auto"
+              className="h-16 w-auto md:h-20"
               priority
             />
+            <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+              Platinum Track Rail Services Has A Management Team With Over 40 Years Of Experience And Spanning Three Generations.
+            </h2>
           </div>
 
-          <h2 className="text-2xl md:text-3xl lg:text-3xl font-semibold leading-snug  col-span-3">
-            Platinum Track Rail Services Has A Management Team With Over 40 Years Of Experience And Spanning Three Generations.
-          </h2>
-
-
-
-          {columns.map((column) => (
-            <div key={column.title}>
-              <h3 className="font-bold text-xl mb-4">{column.title}</h3>
-              <ul className="space-y-2 text-base text-white/90">
-                {column.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-
-          <div>
-
-            <h3 className="font-bold text-xl mb-6">Contact Us</h3>
-
-            <div className="flex items-start space-x-4 mb-6">
-              <PhoneIcon />
-              <div>
-                <p className="font-semibold text-white">Call Us 24/7</p>
-                <a href="tel:+19057727272" className="text-gray-300 text-base hover:text-white transition">
-                  +1 905 772-7272
-                </a>
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {columns.map((column) => (
+              <div key={column.title}>
+                <h3 className="font-bold text-xl mb-4">{column.title}</h3>
+                <ul className="space-y-2 text-base text-white/90">
+                  {column.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            ))}
 
-            <div className="flex items-start space-x-4 mb-6">
-              <MailIcon />
-              <div>
-                <p className="font-semibold text-white">Send Us Mail</p>
-                <a
-                  href="mailto:jviolin@platinumtrack.ca"
-                  className="text-gray-300 text-base hover:text-white transition"
-                >
-                  jviolin@platinumtrack.ca
-                </a>
+            <div className="space-y-6">
+              <h3 className="font-bold text-xl">Contact Us</h3>
+
+              <div className="flex items-start space-x-4">
+                <PhoneIcon />
+                <div>
+                  <p className="font-semibold text-white">Call Us 24/7</p>
+                  <a href="tel:+19057727272" className="text-gray-300 text-base hover:text-white transition">
+                    +1 905 772-7272
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-start space-x-4">
-              <LocationIcon />
-              <div>
-                <p className="font-semibold text-white">851 Haldimand</p>
-                <p className="text-gray-300 text-base">
-                  Hwy#56 RR#1, York, ON
-                  <br />
-                  N0A 1R0
-                </p>
+              <div className="flex items-start space-x-4">
+                <MailIcon />
+                <div>
+                  <p className="font-semibold text-white">Send Us Mail</p>
+                  <a
+                    href="mailto:jviolin@platinumtrack.ca"
+                    className="text-gray-300 text-base hover:text-white transition"
+                  >
+                    jviolin@platinumtrack.ca
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <LocationIcon />
+                <div>
+                  <p className="font-semibold text-white">851 Haldimand</p>
+                  <p className="text-gray-300 text-base">
+                    Hwy#56 RR#1, York, ON
+                    <br />
+                    N0A 1R0
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-full flex  mt-20">
+        <div className="w-full flex mt-16">
 
           {/* <button className="border border-white px-8 py-3 rounded-full text-base font-medium hover:bg-white hover:text-[#0E0F47] transition">
             Accessibility Policy

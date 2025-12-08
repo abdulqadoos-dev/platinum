@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 left-0 w-full z-50 py-6 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-white  via-white/75 to-transparent backdrop:blur-md">
+      <header className="sticky top-0 left-0 w-full z-50 py-6 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-white  via-white/75 to-transparent backdrop-blur-md">
         <div className="flex items-center justify-between">
         {/* Logo */}
         <a className="flex items-center " href="/#home" >
@@ -26,7 +26,7 @@ export default function Navbar() {
             { label: "About Us", href: "/#about" },
             { label: "Indigenous Engagement", href: "/indigenous-engagement" },
             { label: "Contact Us", href: "/#contact" },
-            { label: "Careers", href: "#careers" },
+            { label: "Careers", href: "/#careers" },
           ].map((item) => (
             <a
               key={item.label}
@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center space-x-4">
           
           <a
-            href="#contact"
+            href="/#contact"
             className="px-6 py-2 bg-gradient-to-r from-secondary to-primary text-white rounded-full text-sm font-medium flex items-center space-x-2 hover:shadow-lg transition"
           >
             <span>Get Quote</span>
@@ -115,19 +115,23 @@ export default function Navbar() {
 
           {/* Buttons */}
           <div className="flex flex-col gap-4 mt-auto mb-8">
-            <button
-              className="w-full px-6 py-3 border border-secondary rounded-full text-secondary text-sm font-medium hover:bg-secondary hover:text-white transition"
+            <a
+              href="/#contact"
+              onClick={() => setIsOpen(false)}
+              className="w-full px-6 py-3 border border-secondary rounded-full text-secondary text-sm font-medium hover:bg-secondary hover:text-white transition text-center"
             >
               Get Quote
-            </button>
-            <button
+            </a>
+            <a
+              href="/#contact"
+              onClick={() => setIsOpen(false)}
               className="w-full px-6 py-3 bg-gradient-to-r from-secondary to-primary text-white rounded-full text-sm font-medium flex items-center justify-center space-x-2 hover:shadow-lg transition"
             >
               <span>Contact Us</span>
               <svg width="21" height="21" fill="none" stroke="#F0F0F0" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 21 21">
                 <path d="M14.4785 10.4999L10.2094 14.769M14.4785 10.4999L10.2094 6.23082M14.4785 10.4999L6.99907 10.5M0.5 10.5C0.5 4.97715 4.97715 0.5 10.5 0.5C16.0228 0.5 20.5 4.97715 20.5 10.5C20.5 16.0228 16.0228 20.5 10.5 20.5C4.97715 20.5 0.5 16.0228 0.5 10.5Z" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </motion.div>

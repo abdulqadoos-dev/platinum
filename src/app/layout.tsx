@@ -20,8 +20,8 @@ const gunterz = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Paltinum Trucking",
-  description: "railway Construction you can trust",
+  title: "Platinum Track Services",
+  description: "Railway construction you can trust",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
