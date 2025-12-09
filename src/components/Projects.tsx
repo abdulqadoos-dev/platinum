@@ -61,23 +61,23 @@ export default function Projects() {
       className="bg-gray-100 text-secondary py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
         <div className="flex flex-col md:flex-row md:items-center  mb-12 lg:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-primary leading-none">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none">
             PROJECTS
           </h1>
-          <div className="bg-secondary text-white px-6 py-2 w-full font-bold text-lg md:text-xl leading-tight">
+          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2 md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
             PLATINUM TRACK WORKS IN ALL AREAS
             <br className="hidden md:block" />
-            <span className="md:hidden"> </span>
             OF THE RAIL INDUSTRY
           </div>
         </div>
 
-        <div className=" grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-3">
           {projects.map((project) => (
             <div
               key={project.title + project.image}
-              className="bg-white p-4 rounded-2xl "
+              className="bg-white p-3 rounded-2xl"
             >
               <div className="relative w-full h-48 mb-4">
                 <Image

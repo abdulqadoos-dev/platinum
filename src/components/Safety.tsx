@@ -142,21 +142,23 @@ export default function Safety() {
     <section id="safety" className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <h1 className="w-full relative text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight md:leading-[1.15] font-black tracking-tight text-primary">
-          A PRIORITY IN
-          <br />
-          SAFETY <span className="absolute bg-secondary px-5 text-xl bottom-3 text-white tracking-wide leading-6 py-1 font-bold">OUR SERVICES REVOLVE <br className="hidden sm:block" /> AROUND SAFETY</span>
-        </h1>
+        <div className="flex flex-col w-full">
 
+          <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">A Priority in</h1>
 
+          <div className="flex items-center">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Safety</h1>
+            <p className="bg-secondary text-white px-2 uppercase font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Our Services Revole <br className="hidden sm:block" /> Around Safety</p>
+          </div>
 
+        </div>
 
 
         {/* LEFT ITEMS + PARAGRAPH */}
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 md:gap-10 mb-12 md:mb-16">
 
           {/* LEFT LIST */}
-          <div className="space-y-6 mt-10 lg:col-span-2">
+          <div className="space-y-6 mt-10 lg:col-span-2 hidden lg:block">
             {items.map((item, index) => (
               <div key={index} className="flex items-center gap-4">
                 <span className="w-8 md:w-10 h-0.5 bg-primary"></span>
@@ -167,14 +169,14 @@ export default function Safety() {
 
           {/* RIGHT PARAGRAPH */}
           <div className="space-y-10 mt-10 lg:col-span-6">
-            <p className="text-white bg-secondary px-5 py-1 text-sm font-semibold leading-relaxed md:leading-6 ">
+            <p className="text-white bg-secondary px-5 py-1 text-sm font-semibold leading-relaxed md:leading-6">
               Our clients can trust that we meet all safety training, certification, and third-party verification standards. Our goal is to be the safest rail service provider in the U.S. We emphasize safety daily, fostering a team approach and empowering employees to prioritize it, creating a positive safety culture.
             </p>
 
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl sm:col-span-2 lg:col-span-2 font-black text-primary capitalize leading-tight md:leading-[1.15]">
+              <h2 className="text-xl md:text-4xl sm:col-span-2 lg:col-span-2 font-black text-primary capitalize leading-tight md:leading-[1.15]">
                 How we ensure <br className="hidden sm:block" />safety excellence.
               </h2>
 
