@@ -74,8 +74,6 @@ export default function Services() {
 
           <div className="col-span-12 lg:col-span-4 md:pr-16 ">
 
-
-
             <div className="flex flex-col w-full">
               <div className="flex items-center">
                 <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">Our</h1>
@@ -88,9 +86,7 @@ export default function Services() {
               </p>
 
             </div>
-
-
-
+            
           </div>
 
           <div className="col-span-12 lg:col-span-8 ">

@@ -73,7 +73,7 @@ export default function Navbar() {
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? 0 : "-100%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={`lg:hidden fixed inset-0 bg-white  backdrop-blur-xs z-40 ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`lg:hidden fixed inset-0 bg-white backdrop-blur-xs z-60 ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
       >
         <div className="flex flex-col h-full px-6 py-8 bg-white">
           {/* Header with Logo and Close Button */}
