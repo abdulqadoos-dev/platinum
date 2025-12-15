@@ -1,8 +1,10 @@
 export default function About() {
   const items = [
-    { label: "Compliance" },
-    { label: "Safety Programs" },
-    { label: "Third Party Verification" },
+    { label: "Material Distribution & Pickup" },
+    { label: "Railway Construction" },
+    { label: "Rentals" },
+    { label: "Track Inspection" },
+    { label: "Track Removal" },
   ];
 
   const SafetyIcon = () => (
@@ -65,13 +67,28 @@ export default function About() {
         </div>
 
         {/* LEFT ITEMS + PARAGRAPH */}
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 md:gap-10 mb-12 md:mb-16">
+        <div className="grid  gird-cols-1 lg:grid-cols-8 gap-8 md:gap-10 mb-12 md:mb-16">
 
           {/* LEFT LIST */}
-          <div className="space-y-6 col-span-2 mt-10">
+          <div className="space-y-6 col-span-8 md:col-span-2 mt-10">
             {items.map((item, index) => (
               <div key={index} className="flex items-center gap-4">
-                <span className="w-8 md:w-10 h-0.5 bg-primary"></span>
+                <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-secondary flex items-center justify-center text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="p-1"
+                  >
+                    <path d="M5 12l5 5l10-10" />
+                  </svg>
+                </span>
                 <span className="text-primary font-semibold text-base md:text-lg">{item.label}</span>
               </div>
             ))}
@@ -102,16 +119,11 @@ export default function About() {
               {boxes.map((box, index) => {
                 const IconComponent = box.icon;
                 return (
-                  <div key={index} className="bg-white rounded-xl border border-secondary p-4  transition">
-                    <div className={`w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-4 text-white`}>
-                      <IconComponent />
-                    </div>
-                    <h3 className={`text-primary font-black text-base leading-5 md:text-lg mb-2`}>
+                  <div key={index} className="bg-white rounded-xl border border-secondary p-4 transition">
+                    
+                    <h3 className={`text-primary font-black text-base leading-5 md:text-lg `}>
                       {box.title}
                     </h3>
-                    <p className="text-secondary text-xs ">
-                      {box.description}
-                    </p>
                   </div>
                 );
               })}
