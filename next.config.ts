@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "universalrail.com",
       },
+      {
+        protocol: "https",
+        hostname: "platinumtrack.ca",
+      },
     ],
   },
 };

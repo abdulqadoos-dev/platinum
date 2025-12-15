@@ -37,29 +37,56 @@ const serviceFeatures = [
 
 const serviceCards = [
   {
+    title: "Gauging Gang",
+    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/pexels-brett-sayles-981282-1.jpg",
+  },
+  {
+    title: "Rail / Tie Gang",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Tie-Inserter.jpg",
+  },
+  {
+    title: "Lift Gang",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Lift-Gang.jpg",
+  },
+  {
+    title: "Emergency Response",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/CN-Rail-2.jpg",
+  },
+  {
+    title: "Track Protection / Flagging",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/09/Track-Protection-2.jpg",
+  },
+  {
+    title: "Flash Butt & Thermite Welding",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Flash-Butt-Welding.jpg",
+  },
+  {
     title: "Crossing Rehabilitation",
-    image:
-      "https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&w=800&q=80",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/crossing-rehab.jpg",
+  },
+  {
+    title: "Material Distribution & Pickup",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/09/Mat-Distr-2.jpg",
+  },
+  {
+    title: "Railway Construction & Maintenance",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/09/AdobeStock_153303690.jpeg",
+  },
+  {
+    title: "Rentals",
+    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Roto-Dump.jpg",
+  },
+  {
+    title: "Track Inspection",
+    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/railroad-track-inspection-working-site.webp",
   },
   {
     title: "Track Removal",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/Project_20240710_0009-1.jpeg",
   },
   {
-    title: "Maintenance Planning",
-    image:
-      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Rail Inspection",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Track Installation",
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+    title: "Turnouts",
+    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/Project_20221012_0002-1.jpeg",
   },
 ];
 
