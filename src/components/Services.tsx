@@ -97,28 +97,45 @@ export default function Services() {
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const autoTimer = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const container = sliderRef.current;
     if (!container) return;
     const target = container.children[activeIndex] as HTMLElement | undefined;
     if (target) {
-      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      container.scrollTo({
+        left: target.offsetLeft,
+        behavior: "smooth",
+      });
     }
   }, [activeIndex]);
 
   useEffect(() => {
-    const id = setInterval(() => {
+    if (autoTimer.current) clearInterval(autoTimer.current);
+    if (isPaused) return;
+    autoTimer.current = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % serviceCards.length);
     }, 4500);
-    return () => clearInterval(id);
-  }, []);
+    return () => {
+      if (autoTimer.current) clearInterval(autoTimer.current);
+    };
+  }, [isPaused]);
 
   const scrollSlider = (direction: "next" | "prev") => {
     setActiveIndex((prev) => {
       if (direction === "next") return (prev + 1) % serviceCards.length;
       return (prev - 1 + serviceCards.length) % serviceCards.length;
     });
+  };
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    if (autoTimer.current) clearInterval(autoTimer.current);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
   };
 
   return (
@@ -201,6 +218,8 @@ export default function Services() {
             <div
               ref={sliderRef}
               className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
 
               {serviceCards.map((service) => (
