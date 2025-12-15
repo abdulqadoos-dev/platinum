@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const serviceFeatures = [
   {
@@ -38,59 +41,85 @@ const serviceFeatures = [
 const serviceCards = [
   {
     title: "Gauging Gang",
-    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/pexels-brett-sayles-981282-1.jpg",
+    image: "/services/pexels-brett-sayles-981282-1.jpg",
   },
   {
     title: "Rail / Tie Gang",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Tie-Inserter.jpg",
+    image: "/services/Tie-Inserter.jpg",
   },
   {
     title: "Lift Gang",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Lift-Gang.jpg",
+    image: "/services/Lift-Gang.jpg",
   },
   {
     title: "Emergency Response",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/CN-Rail-2.jpg",
+    image: "/services/CN-Rail-2.jpg",
   },
   {
     title: "Track Protection / Flagging",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/09/Track-Protection-2.jpg",
+    image: "/services/Track-Protection-2.jpg",
   },
   {
     title: "Flash Butt & Thermite Welding",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Flash-Butt-Welding.jpg",
+    image: "/services/Flash-Butt-Welding.jpg",
   },
   {
     title: "Crossing Rehabilitation",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/crossing-rehab.jpg",
+    image: "/services/crossing-rehab.jpg",
   },
   {
     title: "Material Distribution & Pickup",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/09/Mat-Distr-2.jpg",
+    image: "/services/Mat-Distr-2.jpg",
   },
   {
     title: "Railway Construction & Maintenance",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/09/AdobeStock_153303690.jpeg",
+    image: "/services/AdobeStock_153303690.jpeg",
   },
   {
     title: "Rentals",
-    image: "https://platinumtrack.ca/wp-content/uploads/2024/10/Roto-Dump.jpg",
+    image: "/services/Roto-Dump.jpg",
   },
   {
     title: "Track Inspection",
-    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/railroad-track-inspection-working-site.webp",
+    image: "/services/railroad-track-inspection-working-site.webp",
   },
   {
     title: "Track Removal",
-    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/Project_20240710_0009-1.jpeg",
+    image: "/services/Project_20240710_0009-1.jpeg",
   },
   {
     title: "Turnouts",
-    image: "https://platinumtrack.ca/wp-content/uploads/2023/12/Project_20221012_0002-1.jpeg",
+    image: "/services/Project_20221012_0002-1.jpeg",
   },
 ];
 
 export default function Services() {
+
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const container = sliderRef.current;
+    if (!container) return;
+    const target = container.children[activeIndex] as HTMLElement | undefined;
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    }
+  }, [activeIndex]);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % serviceCards.length);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
+  const scrollSlider = (direction: "next" | "prev") => {
+    setActiveIndex((prev) => {
+      if (direction === "next") return (prev + 1) % serviceCards.length;
+      return (prev - 1 + serviceCards.length) % serviceCards.length;
+    });
+  };
 
   return (
     <section id="services" className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 text-secondary">
@@ -104,7 +133,7 @@ export default function Services() {
             <div className="flex flex-col w-full">
               <div className="flex items-center">
                 <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">Our</h1>
-                <p className="bg-secondary text-white px-2 uppercase   font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Full Rail <br className="hidden sm:block" /> Management</p>  
+                <p className="bg-secondary text-white px-2 uppercase  font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Full Rail <br className="hidden sm:block" /> Management</p>  
               </div>
 
               <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Services</h1>
@@ -139,49 +168,94 @@ export default function Services() {
         </div>
 
         <div className="mt-8 sm:mt-12 md:mt-16">
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible lg:snap-none">
+          <div className="relative">
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent hidden sm:block" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent hidden sm:block" />
 
-            {serviceCards.map((service) => (
-              <div
-                key={service.title}
-                className="group relative flex-shrink-0 min-w-[80%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-0 lg:w-auto snap-start"
+            <div className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+              <button
+                type="button"
+                onClick={() => scrollSlider("prev")}
+                className="h-11 w-11 rounded-full bg-white shadow-lg border border-secondary/20 text-secondary flex items-center justify-center hover:scale-105 transition"
               >
-                <div className="relative aspect-[3/4] sm:aspect-[5/6] lg:aspect-[3/4] overflow-hidden rounded-3xl">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 20vw"
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-3xl" />
-                  <button className="absolute right-3 top-3 md:right-4 md:top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-secondary shadow-lg">
-                    <span className="sr-only">View more</span>
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-secondary"
-                    >
-                      <path
-                        d="M8 5L16 12L8 19"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <div className="absolute inset-x-4 sm:inset-x-6 bottom-4 sm:bottom-6 text-white">
-                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-                      {service.title}
-                    </p>
+                <span className="sr-only">Previous</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 5L7 12L15 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+              <button
+                type="button"
+                onClick={() => scrollSlider("next")}
+                className="h-11 w-11 rounded-full bg-white shadow-lg border border-secondary/20 text-secondary flex items-center justify-center hover:scale-105 transition"
+              >
+                <span className="sr-only">Next</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 5L17 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              ref={sliderRef}
+              className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+            >
+
+              {serviceCards.map((service) => (
+                <div
+                  key={service.title}
+                  className="group relative flex-shrink-0 min-w-[80%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[25%] snap-start"
+                >
+                  <div className="relative aspect-[3/4] sm:aspect-[5/6] lg:aspect-[3/4] overflow-hidden rounded-3xl">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 20vw"
+                      className="object-cover transition duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-3xl" />
+                    <button className="absolute right-3 top-3 md:right-4 md:top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-secondary shadow-lg">
+                      <span className="sr-only">View more</span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="text-secondary"
+                      >
+                        <path
+                          d="M8 5L16 12L8 19"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <div className="absolute inset-x-4 sm:inset-x-6 bottom-4 sm:bottom-6 text-white">
+                      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+                        {service.title}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="mt-6 flex items-center justify-center gap-2">
+              {serviceCards.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setActiveIndex(idx)}
+                  className={`h-2.5 w-2.5 rounded-full transition ${idx === activeIndex ? "bg-primary scale-110" : "bg-secondary/30 hover:bg-secondary/60"}`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
