@@ -101,7 +101,7 @@ export default function Footer() {
               className="h-16 w-auto md:h-20"
               priority
             />
-            <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+            <h2 className="text-xl md:text-2xl font-semibold leading-snug">
               Platinum Track Rail Services Has A Management Team With Over 40 Years Of Experience And Spanning Three Generations.
             </h2>
           </div>

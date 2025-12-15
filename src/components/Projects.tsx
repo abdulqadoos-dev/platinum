@@ -73,13 +73,13 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className=" grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-3">
+        <div className=" grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-3 ">
           {projects.map((project) => (
             <div
               key={project.title + project.image}
-              className="bg-white p-3 rounded-2xl"
+              className="bg-white p-3 rounded-2xl flex flex-col justify-around gap-3"
             >
-              <div className="relative w-full h-48 mb-4">
+              <div className="relative w-full h-48 ">
                 <Image
                   src={project.image}
                   alt={`${project.title} image`}
@@ -88,10 +88,10 @@ export default function Projects() {
                   className="rounded-xl object-cover"
                 />
               </div>
-              <h3 className="text-primary text-2xl font-bold mb-2">
+              <h3 className="text-primary text-2xl font-bold ">
                 {project.title}
               </h3>
-              <p className="text-secondary text-sm leading-relaxed mb-4">
+              <p className="text-secondary text-sm leading-relaxed ">
                 {project.description}
               </p>
               <button className="flex items-center space-x-2 bg-secondary text-white px-4 py-1 text-sm rounded-full ml-auto">

@@ -55,16 +55,17 @@ export default function Careers() {
       className="bg-gray-100 text-secondary py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-center  mb-12 lg:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-primary leading-none">
-            CAREERS
+
+       
+        <div className="flex flex-col  md:gap-3 lg:flex-row items-start lg:items-center mb-12 lg:mb-16">
+
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none text-nowrap">
+            Careers
           </h1>
-          <div className="bg-secondary text-white px-6 py-2 w-full font-bold text-lg md:text-xl leading-tight">
-            PLATINUM TRACK WORKS IN ALL AREAS
-            <br className="hidden md:block" />
-            <span className="md:hidden"> </span>
-            OF THE RAIL INDUSTRY
+          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2  md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
+            40 Years Of Experience And<br className="hidden sm:block" />Spanning Three Generations
           </div>
+
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">

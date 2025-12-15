@@ -53,12 +53,12 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* HEADING SECTION */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center">
+        <div className="flex flex-col  md:gap-3 lg:flex-row items-start lg:items-center ">
 
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none text-nowrap">
             About us
           </h1>
-          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2 md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
+          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2  md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
             40 Years Of Experience And<br className="hidden sm:block" />Spanning Three Generations
           </div>
 

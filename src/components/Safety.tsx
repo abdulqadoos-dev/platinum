@@ -169,14 +169,14 @@ export default function Safety() {
 
           {/* RIGHT PARAGRAPH */}
           <div className="space-y-10 mt-10 lg:col-span-6">
-            <p className="text-white bg-secondary px-5 py-1 text-sm font-semibold leading-relaxed md:leading-6">
+            <p className="text-white bg-secondary px-5 py-1 md:py-2 text-sm font-semibold leading-relaxed md:leading-6">
               Our clients can trust that we meet all safety training, certification, and third-party verification standards. Our goal is to be the safest rail service provider in the U.S. We emphasize safety daily, fostering a team approach and empowering employees to prioritize it, creating a positive safety culture.
             </p>
 
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
 
-              <h2 className="text-xl md:text-4xl sm:col-span-2 lg:col-span-2 font-black text-primary capitalize leading-tight md:leading-[1.15]">
+              <h2 className="text-xl md:text-4xl col-span-2 lg:col-span-2 font-black text-primary capitalize leading-tight md:leading-[1.15]">
                 How we ensure <br className="hidden sm:block" />safety excellence.
               </h2>
 
