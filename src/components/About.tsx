@@ -55,22 +55,13 @@ export default function About() {
         {/* HEADING SECTION */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
 
-          <h1 className="text-4xl sm:text-5xl text-nowrap md:text-6xl lg:text-7xl font-black text-primary leading-tight">
-            ABOUT US
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none">
+            About us
           </h1>
-
-          <div className="bg-secondary text-white flex flex-col lg:flex-row items-start lg:items-center  px-6 md:px-20  w-full py-1 gap-4">
-
-            <span className="text-sm md:text-lg font-bold leading-snug">
-              40 Years Of Experience And<br className="hidden sm:block" />Spanning Three Generations
-            </span>
-
-            <svg width="34" height="34" fill="none" stroke="#16134A" viewBox="0 0 21 21" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="10.5" cy="10.5" r="10" fill="white" stroke="#16134A" strokeWidth="0.5" />
-              <path d="M14.4785 10.4999L10.2094 14.769M14.4785 10.4999L10.2094 6.23082M14.4785 10.4999L6.99907 10.5" />
-            </svg>
-
+          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2 md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
+            40 Years Of Experience And<br className="hidden sm:block" />Spanning Three Generations
           </div>
+
         </div>
 
         {/* LEFT ITEMS + PARAGRAPH */}
@@ -129,7 +120,6 @@ export default function About() {
           </div>
 
         </div>
-
 
       </div>
     </section>
