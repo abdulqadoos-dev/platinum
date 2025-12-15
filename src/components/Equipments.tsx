@@ -30,32 +30,20 @@ export default function Equipments() {
 
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
 
-            <div className="relative h-[200px]  rounded-2xl overflow-hidden">
-              {/* Background Image */}
+            <div className="relative h-[200px] rounded-2xl overflow-hidden group">
               <Image
-                src="/equipments/equipment-1-background.png"
-                alt="Equipment Background"
+                src="/equipments/Float%20Truck.jpg"
+                alt="Float Truck"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-
-              {/* Main Equipment Image */}
-              <div className="absolute inset-0 flex items-center justify-center group">
-                <Image
-                  src="/equipments/equipment-1.png"
-                  alt="Bulldozer"
-                  width={300}
-                  height={200}
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
 
               {/* Glassmorphic Badge - Bottom Right */}
               <div className="absolute bottom-6 right-6">
                 <div className="flex items-center justify-center px-4 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
                   <p className="text-white font-semibold text-sm sm:text-base capitalize">
-                    Bulldozer
+                    Float Truck
                   </p>
                 </div>
               </div>
@@ -64,32 +52,20 @@ export default function Equipments() {
 
 
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
-            <div className="relative h-[200px]  rounded-2xl overflow-hidden">
-              {/* Background Image */}
+            <div className="relative h-[200px] rounded-2xl overflow-hidden group">
               <Image
-                src="/equipments/equipment-1-background.png"
-                alt="Equipment Background"
+                src="/equipments/jr-tamper.jpg"
+                alt="JR Tamper"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-
-              {/* Main Equipment Image */}
-              <div className="absolute inset-0 flex items-center justify-center group">
-                <Image
-                  src="/equipments/equipment-1.png"
-                  alt="Bulldozer"
-                  width={300}
-                  height={200}
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
 
               {/* Glassmorphic Badge - Bottom Right */}
               <div className="absolute bottom-6 right-6">
                 <div className="flex items-center justify-center px-4 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
                   <p className="text-white font-semibold text-sm sm:text-base capitalize">
-                    Bulldozer
+                    JR Tamper
                   </p>
                 </div>
               </div>
@@ -101,54 +77,36 @@ export default function Equipments() {
           {/* Left Side - 40% width - 2 images stacked vertically */}
           <div className="w-full md:w-2/5 flex flex-col gap-6">
             {/* Image 1 */}
-            <div className="relative h-[228px] rounded-2xl overflow-hidden">
+            <div className="relative h-[228px] rounded-2xl overflow-hidden group">
               <Image
-                src="/equipments/equipment-1-background.png"
-                alt="Equipment Background"
+                src="/equipments/Pics-Mark%20IV.jpg"
+                alt="Pics-Mark IV"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center group">
-                <Image
-                  src="/equipments/equipment-1.png"
-                  alt="Bulldozer"
-                  width={250}
-                  height={150}
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
               <div className="absolute bottom-4 right-4">
                 <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
                   <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Bulldozer
+                    Pics-Mark IV
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Image 2 */}
-            <div className="relative h-[228px] rounded-2xl overflow-hidden">
+            <div className="relative h-[228px] rounded-2xl overflow-hidden group">
               <Image
-                src="/equipments/equipment-1-background.png"
-                alt="Equipment Background"
+                src="/equipments/Stabilizer.jpg"
+                alt="Stabilizer"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center group">
-                <Image
-                  src="/equipments/equipment-1.png"
-                  alt="Bulldozer"
-                  width={250}
-                  height={150}
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
               <div className="absolute bottom-4 right-4">
                 <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
                   <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Bulldozer
+                    Stabilizer
                   </p>
                 </div>
               </div>
@@ -158,54 +116,36 @@ export default function Equipments() {
           {/* Right Side - 60% width - 2 images side by side */}
           <div className="w-full md:w-3/5 flex gap-6">
             {/* Image 3 */}
-            <div className="relative h-[480px] flex-1 rounded-2xl overflow-hidden">
+            <div className="relative h-[480px] flex-1 rounded-2xl overflow-hidden group">
               <Image
-                src="/equipments/equipment-1-background.png"
-                alt="Equipment Background"
+                src="/equipments/cn-rail.jpg"
+                alt="CN Rail"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center group">
-                <Image
-                  src="/equipments/equipment-1.png"
-                  alt="Bulldozer"
-                  width={250}
-                  height={150}
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
               <div className="absolute bottom-4 right-4">
                 <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
                   <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Bulldozer
+                    CN Rail
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Image 4 */}
-            <div className="relative h-[480px] flex-1 rounded-2xl overflow-hidden hidden lg:block">
+            <div className="relative h-[480px] flex-1 rounded-2xl overflow-hidden hidden lg:block group">
               <Image
-                src="/equipments/equipment-1-background.png"
-                alt="Equipment Background"
+                src="/equipments/Mat%20Distr%20%26%20PU.jpg"
+                alt="Mat Distr & PU"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center group">
-                <Image
-                  src="/equipments/equipment-1.png"
-                  alt="Bulldozer"
-                  width={250}
-                  height={150}
-                  className="object-contain transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
               <div className="absolute bottom-4 right-4">
                 <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
                   <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Bulldozer
+                    Mat Distr & PU
                   </p>
                 </div>
               </div>
