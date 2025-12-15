@@ -24,19 +24,7 @@ const columns = [
       "Mabel Shaw",
       "Brad Schwartz",
     ],
-  },
-  {
-    title: "Safety",
-    items: [
-      "Tony Marshall",
-      "Annie Pacheco",
-      "Vernon Francis",
-      "Terry Martinez",
-      "Penny Norman",
-      "Mabel Shaw",
-      "Brad Schwartz",
-    ],
-  },
+  }
 ];
 
 const PhoneIcon = () => (
@@ -88,10 +76,11 @@ const LocationIcon = () => (
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-[#0E0F47] text-white px-6 sm:px-8 lg:px-24 py-16 sm:py-20">
+    <footer id="footer" className="bg-secondary text-white px-6 sm:px-8 lg:px-24 py-16 sm:py-20">
       <div className="mx-auto max-w-6xl xl:max-w-7xl">
 
         <div className="grid gap-10 lg:grid-cols-4 text-left">
+          
           <div className="space-y-6 lg:col-span-1">
             <Image
               src="/logo-white.png"
@@ -101,12 +90,17 @@ export default function Footer() {
               className="h-16 w-auto md:h-20"
               priority
             />
-            <h2 className="text-xl md:text-2xl font-semibold leading-snug">
-              Platinum Track Rail Services Has A Management Team With Over 40 Years Of Experience And Spanning Three Generations.
-            </h2>
+
           </div>
 
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <h2 className="text-lg md:text-2xl font-semibold leading-snug  col-span-4">
+              Platinum Track Rail Services Has A Management Team With Over 40 Years Of Experience And Spanning Three Generations.
+            </h2>
+
+
+
             {columns.map((column) => (
               <div key={column.title}>
                 <h3 className="font-bold text-xl mb-4">{column.title}</h3>
@@ -118,7 +112,9 @@ export default function Footer() {
               </div>
             ))}
 
-            <div className="space-y-6">
+
+
+            <div className="space-y-6  col-span-4 md:col-span-2">
               <h3 className="font-bold text-xl">Contact Us</h3>
 
               <div className="flex items-start space-x-4">
