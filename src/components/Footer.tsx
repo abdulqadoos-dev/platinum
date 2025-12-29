@@ -110,7 +110,6 @@ export default function Footer() {
             </h2>
 
 
-
             {columns.map((column) => (
               <div key={column.title}>
                 <h3 className="font-bold text-xl mb-4">{column.title}</h3>
