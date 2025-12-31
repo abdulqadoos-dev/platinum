@@ -75,6 +75,16 @@ export const serviceCards: ServiceCard[] = [
         <p>
           The Gauging Gang plays a vital role in ensuring tracks remain in optimal condition for safe train operations.
         </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -106,6 +116,16 @@ export const serviceCards: ServiceCard[] = [
         <p>
           Rail/Tie Gangs are essential for keeping rail networks safe, reliable, and efficient.
         </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -132,6 +152,16 @@ export const serviceCards: ServiceCard[] = [
         <p>
           Lift gang services play a vital role in maintaining the integrity and reliability of railway infrastructure.
         </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -145,13 +175,23 @@ export const serviceCards: ServiceCard[] = [
           Our experienced team is ready to respond within one hour of your call, providing emergency rail response services across Canada.
         </p>
         <ul className="list-disc pl-5 space-y-2">
-          <li>Rail Car and Locomotive Services: Re-railing, dismantling, recycling, and mainline track clearing.</li>
-          <li>Environmental Remediation: Removal and cleanup of contaminants from soil, groundwater, and sediment.</li>
-          <li>Load Handling Solutions: Certified crews for load transfers, securement, and transport of damaged railcars.</li>
+          <li>Rail Car and Locomotive Services: Re-railing, dismantling, and recycling of rail cars, as well as mainline track clearing.</li>
+          <li>Environmental Remediation: In the event of a derailment, we handle the removal and cleanup of contaminants from soil, groundwater, and sediment, ensuring public and environmental safety. Our expertise spans excavation, transportation, treatment, and disposal of contaminated materials, with a track record of successful remediation projects nationwide.</li>
+          <li>Load Handling Solutions: Our "e-rail safe certified" crews specialize in transferring various loads, including steel, bulk, and wet commodities, to and from railcars and trucks. We expertly manage load transfers, securement, and the transport of damaged or unsafe railcars, adapting to the challenges of extreme temperatures and rugged terrain.</li>
         </ul>
         <p>
-          With extensive experience, we deliver safe and timely solutions, even in remote locations.
+          With our extensive experience, we deliver safe and timely solutions, even in remote locations, addressing unique situations like shifted or overloaded cars with agility and innovation.
         </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -185,24 +225,27 @@ export const serviceCards: ServiceCard[] = [
         <div>
           <h3 className="text-xl font-bold text-primary">Flash Butt Welding</h3>
           <p className="mt-2">
-            Flash butt welding is a plant-based method that fuses rail ends with high-voltage resistance and current density to create joints with base-metal strength.
+            Flash butt welding is a specialized technique predominantly utilized in rail welding plants. This method involves welding small parts together through high-voltage resistance, where components are aligned end-to-end and fused using high current density. During the welding process, long gauge rails, typically around 100 meters, are placed in a dedicated machine and heated based on the thermal effects of the current. Once the rail reaches a plastic state, it is rapidly extruded, ensuring a robust joint. The primary advantage of flash butt welding is that it creates a bond with a strength equivalent to that of the base metal, resulting in a smooth surface that can be easily polished. However, its application is limited to factory settings, making it less versatile for on-site welding.
           </p>
           <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>High-voltage resistance welding for long gauge rails.</li>
-            <li>Produces strong welds with smooth, polishable surfaces.</li>
+            <li>Utilizes high-voltage resistance to fuse components end-to-end with high current density.</li>
+            <li>Produces strong welds equivalent to the base metal strength, ideal for long gauge rails.</li>
           </ul>
         </div>
         <div>
           <h3 className="text-xl font-bold text-primary">Thermite Welding</h3>
           <p className="mt-2">
-            Thermite welding uses an exothermic reaction between metal oxides and aluminum to generate heat for outdoor rail welding.
+            Alumino-thermic welding, commonly known as thermit welding, utilizes the heat generated from an exothermic reaction to achieve coalescence between metals. The term "thermite" refers to the reaction involving metal oxides and reducing agents, where a mixture of low-formation heat metal oxides and high-formation heat metallic reducing agents creates a significant amount of heat during oxidation. This heat is harnessed to melt and fuse the two rail sections together. Suitable for outdoor construction sites, this method involves a redox reaction between iron and aluminum, producing molten iron that effectively welds the rails. Compared to flash butt welding, thermit welding is faster and offers stable quality; however, it requires a larger initial investment in equipment and substantial power. While pneumatic welding has lower upfront costs and shorter welding times, it has strict requirements for joint preparation and can be challenging for ultra-long rails or continuous track sections. Overall, thermit welding is relatively simple and requires less operator expertise, but its welding quality may not match that of contact or gas pressure welding.
           </p>
           <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Suitable for outdoor applications with stable quality.</li>
-            <li>Faster welding with lower operator expertise requirements.</li>
+            <li>Relies on an exothermic reaction between metal oxides and aluminum to generate heat for welding.</li>
+            <li>Suitable for outdoor applications, offering faster welding speeds and stable quality.</li>
           </ul>
         </div>
-        <p>We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -213,12 +256,27 @@ export const serviceCards: ServiceCard[] = [
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          We remove old crossing panels and trackbed materials, prepare new underlayment and ballast, install new track panels, and finish with a modern crossing surface.
+          The old crossing panel and trackbed materials have been meticulously removed, revealing a freshly excavated foundation ready for revitalization. The site is now prepared for the installation of a new asphalt underlayment layer, providing a robust base that ensures durability and smoothness. Above this, a pre-compacted ballast layer is carefully laid, offering optimal support and stability for the new track panel. The gleaming new track panel is then positioned with precision, its sturdy construction promising enhanced safety and performance. Finally, the installation of a modern crossing surface completes the transformation, blending functionality with a seamless aesthetic that elevates both the infrastructure and the surrounding environment.
         </p>
         <p>
-          Our process is built for durability, safety, and smooth roadway integration with minimal disruption.
+          Our advanced technology enables us to deliver a wide range of materials, including rails and ties, effectively supporting your maintenance operations. Our team's expertise guarantees accurate and timely distribution, minimizing disruptions and enhancing operational efficiency.
         </p>
-        <p>We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        <p>
+          In addition to distribution, we offer specialized pickup services for scrap rail, used ties, and other track materials (OTM). Our streamlined pickup process is designed to facilitate the efficient removal and transportation of these materials, helping you maintain a tidy and organized work environment.
+        </p>
+        <p>
+          At Platinum Track Services, we are dedicated to delivering exceptional service while upholding the highest standards of safety and compliance. Trust us to manage your material needs with professionalism and care, ensuring your track maintenance projects are completed with the utmost reliability and efficiency.
+        </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -237,7 +295,19 @@ export const serviceCards: ServiceCard[] = [
         <p>
           Our advanced equipment and qualified personnel ensure accurate, timely distribution while minimizing disruptions.
         </p>
-        <p>We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        <p>
+          At Platinum Track Services, we are dedicated to delivering exceptional service while upholding the highest standards of safety and compliance. Trust us to manage your material needs with professionalism and care, ensuring your track maintenance projects are completed with the utmost reliability and efficiency.
+        </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -256,7 +326,19 @@ export const serviceCards: ServiceCard[] = [
         <p>
           We prioritize planning, execution, and timelines to deliver reliable results for new rail lines and specialized installations.
         </p>
-        <p>We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        <p>
+          Whether you are undertaking a new rail line for a major infrastructure project or a specialized track installation, Platinum Track is dedicated to delivering superior results and exceptional service, making us the ideal choice for your railway construction needs.
+        </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We have the experience and expertise to deliver a variety of building designs for a wide range of clients. We are used to working on complex building projects with challenging programmes and high customer expectations. Our team works closely with our clients and professional advisors to understand the requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -275,6 +357,16 @@ export const serviceCards: ServiceCard[] = [
         <p>
           For availability, pricing, and scheduling, contact our office for a seamless rental experience.
         </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -293,7 +385,16 @@ export const serviceCards: ServiceCard[] = [
         <p>
           We also offer tailored maintenance programs to prevent issues before they become significant problems.
         </p>
-        <p>We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We have the experience and expertise to deliver a variety of building designs for a wide range of clients. We are used to working on complex building projects with challenging programmes and high customer expectations. Our team works closely with our clients and professional advisors to understand the requirements.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
@@ -312,6 +413,12 @@ export const serviceCards: ServiceCard[] = [
         <p>
           Our approach maximizes resource recovery while minimizing environmental impact.
         </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We possess the experience and expertise to execute a variety of railway track removal projects for diverse clients. Our team is adept at handling complex operations with tight timelines and high customer expectations. We collaborate closely with our clients and professional advisors to fully understand their specific needs and requirements.
+          </p>
+        </div>
       </div>
     ),
   },
@@ -322,12 +429,19 @@ export const serviceCards: ServiceCard[] = [
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          Platinum Track provides comprehensive installation and rehabilitation services for turnouts, critical components for track switching and rail operations.
+          Platinum Track offers comprehensive services for the installation and rehabilitation of turnouts. Our expertise ensures that turnouts--critical components for track switching and rail operations--are installed with precision and rehabilitated to meet the highest standards. We handle every aspect of the process, from initial setup to ongoing maintenance, ensuring optimal performance and reliability. Trust Platinum Track to deliver quality solutions for your turnout needs, enhancing the efficiency and safety of your rail infrastructure.
         </p>
-        <p>
-          We handle every stage from initial setup to ongoing maintenance, ensuring optimal performance and reliability.
-        </p>
-        <p>We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Our Services Include</h3>
+          <p className="mt-2">
+            We have the experience and expertise to deliver diverse turnout designs for various clients. Skilled in managing complex projects with tight schedules and high expectations, our team collaborates closely with clients and professional advisors to fully understand their needs.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Working Process</h3>
+          <p className="mt-2">We have a track record of delivering significant extension and expansion projects for the rail industry.</p>
+          <p className="mt-2">We are proud to have our Occupational Health and Safety Management System CORTM Certified.</p>
+        </div>
       </div>
     ),
   },
