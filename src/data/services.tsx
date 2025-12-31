@@ -11,6 +11,11 @@ export type ServiceCard = {
   image: string;
   slug: string;
   detailContent: ReactNode;
+  tags?: string[];
+  statusLabel?: string;
+  statusValue?: string;
+  metrics?: Array<{ label: string; value: string }>;
+  feedLabel?: string;
 };
 
 export const serviceFeatures: ServiceFeature[] = [
@@ -51,6 +56,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Gauging Gang",
     image: "/services/pexels-brett-sayles-981282-1.jpg",
     slug: "gauging-gang",
+    tags: ["Gauge Control", "Track Geometry", "Inspection Ready"],
+    statusLabel: "Crew Status",
+    statusValue: "Field Active",
+    metrics: [
+      { label: "Gauge", value: "Standard" },
+      { label: "Inspection", value: "Routine" },
+      { label: "Documentation", value: "Logged" },
+    ],
+    feedLabel: "Gauge Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -92,6 +106,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Rail / Tie Gang",
     image: "/services/Tie-Inserter.jpg",
     slug: "rail-tie-gang",
+    tags: ["Tie Renewal", "Rail Replacement", "Ballast Work"],
+    statusLabel: "Crew Status",
+    statusValue: "Scheduled",
+    metrics: [
+      { label: "Rails", value: "Replacement" },
+      { label: "Ties", value: "Installation" },
+      { label: "Alignment", value: "Calibrated" },
+    ],
+    feedLabel: "Track Ops",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -133,6 +156,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Lift Gang",
     image: "/services/Lift-Gang.jpg",
     slug: "lift-gang",
+    tags: ["Heavy Lift", "Crane Ops", "Switch Handling"],
+    statusLabel: "Lift Status",
+    statusValue: "On Site",
+    metrics: [
+      { label: "Lifts", value: "Coordinated" },
+      { label: "Safety", value: "High" },
+      { label: "Precision", value: "Tight" },
+    ],
+    feedLabel: "Lift Cam",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -169,6 +201,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Emergency Response",
     image: "/services/CN-Rail-2.jpg",
     slug: "emergency-response",
+    tags: ["Emergency Response", "1-Hour Dispatch", "E-Rail Safe"],
+    statusLabel: "Dispatch",
+    statusValue: "Ready",
+    metrics: [
+      { label: "Response", value: "1 Hour" },
+      { label: "Availability", value: "24/7" },
+      { label: "Coverage", value: "Canada Wide" },
+    ],
+    feedLabel: "Response Desk",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -199,6 +240,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Track Protection / Flagging",
     image: "/services/Track-Protection-2.jpg",
     slug: "track-protection-flagging",
+    tags: ["CROR Flagging", "Track Protection", "Safety Zone"],
+    statusLabel: "Protection",
+    statusValue: "Active",
+    metrics: [
+      { label: "Compliance", value: "CROR" },
+      { label: "Coverage", value: "Nationwide" },
+      { label: "Clearance", value: "Secured" },
+    ],
+    feedLabel: "Protection Log",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -220,6 +270,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Flash Butt & Thermite Welding",
     image: "/services/Flash-Butt-Welding.jpg",
     slug: "flash-butt-thermite-welding",
+    tags: ["Welding Plant", "Field Thermite", "Rail Joints"],
+    statusLabel: "Weld Status",
+    statusValue: "Operational",
+    metrics: [
+      { label: "Process", value: "Flash/Thm" },
+      { label: "Quality", value: "High" },
+      { label: "Setting", value: "Plant/Field" },
+    ],
+    feedLabel: "Weld Monitor",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <div>
@@ -253,6 +312,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Crossing Rehabilitation",
     image: "/services/crossing-rehab.jpg",
     slug: "crossing-rehabilitation",
+    tags: ["Crossing Rehab", "Panel Install", "Roadway Restore"],
+    statusLabel: "Site Status",
+    statusValue: "In Progress",
+    metrics: [
+      { label: "Foundation", value: "Prepared" },
+      { label: "Panel", value: "Aligned" },
+      { label: "Surface", value: "Finished" },
+    ],
+    feedLabel: "Crossing View",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -284,6 +352,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Material Distribution & Pickup",
     image: "/services/Mat-Distr-2.jpg",
     slug: "material-distribution-pickup",
+    tags: ["Material Logistics", "Delivery", "Pickup"],
+    statusLabel: "Logistics",
+    statusValue: "On Schedule",
+    metrics: [
+      { label: "Delivery", value: "Rails/Ties" },
+      { label: "Pickup", value: "Scrap/OTM" },
+      { label: "Timing", value: "Coordinated" },
+    ],
+    feedLabel: "Logistics Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -315,6 +392,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Railway Construction & Maintenance",
     image: "/services/AdobeStock_153303690.jpeg",
     slug: "railway-construction-maintenance",
+    tags: ["Rail Construction", "Site Planning", "Turnouts"],
+    statusLabel: "Project Status",
+    statusValue: "Mobilized",
+    metrics: [
+      { label: "Planning", value: "Detailed" },
+      { label: "Install", value: "Certified" },
+      { label: "Timeline", value: "Managed" },
+    ],
+    feedLabel: "Site Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -346,6 +432,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Rentals",
     image: "/services/Roto-Dump.jpg",
     slug: "rentals",
+    tags: ["Equipment Rentals", "Short/Long Term", "Hirail Fleet"],
+    statusLabel: "Availability",
+    statusValue: "Book Now",
+    metrics: [
+      { label: "Fleet", value: "Specialized" },
+      { label: "Term", value: "Flexible" },
+      { label: "Support", value: "On Call" },
+    ],
+    feedLabel: "Fleet Status",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -374,6 +469,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Track Inspection",
     image: "/services/railroad-track-inspection-working-site.webp",
     slug: "track-inspection",
+    tags: ["TIG Qualified", "Visual Inspection", "Reports"],
+    statusLabel: "Inspection",
+    statusValue: "Scheduled",
+    metrics: [
+      { label: "Inspection", value: "Visual" },
+      { label: "Reporting", value: "Action Plan" },
+      { label: "Standards", value: "Compliant" },
+    ],
+    feedLabel: "Inspection Log",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -402,6 +506,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Track Removal",
     image: "/services/Project_20240710_0009-1.jpeg",
     slug: "track-removal",
+    tags: ["Track Removal", "Material Recovery", "Road Crossing"],
+    statusLabel: "Removal",
+    statusValue: "Active",
+    metrics: [
+      { label: "Recovery", value: "Salvage" },
+      { label: "Disposal", value: "Managed" },
+      { label: "Restoration", value: "Roadway" },
+    ],
+    feedLabel: "Removal View",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
@@ -426,6 +539,15 @@ export const serviceCards: ServiceCard[] = [
     title: "Turnouts",
     image: "/services/Project_20221012_0002-1.jpeg",
     slug: "turnouts",
+    tags: ["Turnout Install", "Rehabilitation", "Switching"],
+    statusLabel: "Turnout Status",
+    statusValue: "Maintained",
+    metrics: [
+      { label: "Reliability", value: "High" },
+      { label: "Rehab", value: "Ongoing" },
+      { label: "Alignment", value: "Precise" },
+    ],
+    feedLabel: "Switchboard",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
