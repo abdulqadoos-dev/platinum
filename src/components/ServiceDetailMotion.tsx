@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   show: {
     opacity: 1,
     transition: {
@@ -15,7 +15,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0.7, y: 18 },
   show: {
     opacity: 1,
     y: 0,
@@ -24,7 +24,7 @@ const itemVariants = {
 };
 
 const imageVariants = {
-  hidden: { opacity: 0, y: 22, scale: 0.98 },
+  hidden: { opacity: 0.7, y: 22, scale: 0.98 },
   show: {
     opacity: 1,
     y: 0,
