@@ -1,13 +1,13 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { MotionContainer, MotionImage, MotionItem } from "@/components/ServiceDetailMotion";
-import { serviceCards } from "@/data/services";
+import { projectItems } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-type ServicePageProps = {
+type ProjectPageProps = {
   params: Promise<{ slug: string }>;
 };
 
@@ -18,34 +18,34 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "");
 
-const getService = (slug: string) => {
+const getProject = (slug: string) => {
   const normalizedSlug = normalize(slug);
-  return serviceCards.find((service) => {
-    return normalize(service.slug) === normalizedSlug || slugify(service.title) === normalizedSlug;
+  return projectItems.find((project) => {
+    return normalize(project.slug) === normalizedSlug || slugify(project.title) === normalizedSlug;
   });
 };
 
 export const dynamic = "force-dynamic";
 
-export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const service = getService(slug);
-  if (!service) {
+  const project = getProject(slug);
+  if (!project) {
     return {
-      title: "Service Details | Platinum Track Services",
+      title: "Project Details | Platinum Track Services",
     };
   }
   return {
-    title: `${service.title} | Platinum Track Services`,
-    description: `Learn more about ${service.title} services from Platinum Track Services.`,
+    title: `${project.title} | Platinum Track Services`,
+    description: project.description,
   };
 }
 
-export default async function ServiceDetailPage({ params }: ServicePageProps) {
+export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   const { slug } = await params;
-  const service = getService(slug);
+  const project = getProject(slug);
 
-  if (!service) {
+  if (!project) {
     notFound();
   }
 
@@ -58,15 +58,15 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <section className="relative py-12 sm:py-16 md:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-secondary/60">
-              <Link href="/#services" className="hover:text-white transition">
-                Services
+              <Link href="/#projects" className="hover:text-secondary transition">
+                Projects
               </Link>
               <span className="text-secondary/40">/</span>
-              <span className="text-primary">{service.title}</span>
+              <span className="text-primary">{project.title}</span>
             </div>
-            {service.tags?.length ? (
+            {project.tags?.length ? (
               <div className="mt-3 flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/50">
-                {service.tags.map((tag) => (
+                {project.tags.map((tag) => (
                   <span key={tag} className="rounded-full border border-secondary/10 bg-white/70 px-4 py-1">
                     {tag}
                   </span>
@@ -77,7 +77,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               <MotionItem className="lg:col-span-2">
                 <div className="relative">
                   <h1 className="text-3xl font-extrabold uppercase text-primary sm:text-4xl md:text-5xl">
-                    {service.title}
+                    {project.title}
                   </h1>
                   <div className="mt-4 h-[2px] w-20 bg-primary" />
                 </div>
@@ -85,20 +85,20 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               <div className="space-y-6">
                 <MotionItem>
                   <div className="rounded-2xl border border-secondary/10 bg-white/80 p-6 shadow-[0_10px_40px_rgba(168,31,39,0.12)] backdrop-blur">
-                    {service.detailContent}
+                    {project.detailContent}
                   </div>
                 </MotionItem>
                 <MotionItem>
                   <div className="rounded-2xl border border-secondary/10 bg-white/80 p-5">
                     <div className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.3em] text-secondary/60">
-                      <span>{service.statusLabel ?? "Status"}</span>
+                      <span>{project.statusLabel ?? "Project Status"}</span>
                       <span className="h-[1px] w-16 bg-secondary/10" />
-                      <span className="text-primary">{service.statusValue ?? "Operational"}</span>
+                      <span className="text-primary">{project.statusValue ?? "Active"}</span>
                     </div>
                     <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                      {(service.metrics ?? [
+                      {(project.metrics ?? [
+                        { label: "Phase", value: "Active" },
                         { label: "Safety", value: "High" },
-                        { label: "Availability", value: "24/7" },
                         { label: "Coverage", value: "Nationwide" },
                       ]).map((item) => (
                         <div key={item.label} className="rounded-xl border border-secondary/10 bg-white p-4 shadow-sm">
@@ -114,30 +114,22 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 <MotionImage>
                   <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_20px_60px_rgba(18,19,21,0.2)]">
                     <Image
-                      src={service.image}
-                      alt={service.title}
+                      src={project.image}
+                      alt={project.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
                     <div className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
-                      {service.feedLabel ?? "Live Feed"}
+                      {project.feedLabel ?? "Project Feed"}
                     </div>
                   </div>
                 </MotionImage>
                 <MotionItem>
                   <div className="rounded-2xl border border-secondary/10 bg-white/80 p-5">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary/60">Need more info?</p>
-                    <p className="mt-2 text-base font-semibold text-secondary">
-                      Contact our team for scheduling, availability, and scope.
-                    </p>
-                    <Link
-                      href="/#contact"
-                      className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition hover:opacity-90"
-                    >
-                      Get In Touch
-                    </Link>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary/60">Project Date</p>
+                    <p className="mt-2 text-base font-semibold text-secondary">{project.date}</p>
                   </div>
                 </MotionItem>
               </div>

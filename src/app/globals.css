@@ -14,6 +14,29 @@ html {
   scrollbar-width: none;
 }
 
+/* Slim themed scrollbar */
+.scrollbar-slim {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 31, 39, 0.75) transparent;
+}
+
+.scrollbar-slim::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-slim::-webkit-scrollbar-thumb {
+  background: rgba(168, 31, 39, 0.8);
+  border-radius: 999px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 31, 39, 1);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #16134a;
