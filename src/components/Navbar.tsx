@@ -20,10 +20,10 @@ export default function Navbar() {
         <nav className="hidden lg:flex space-x-8 text-secondary font-medium text-sm">
           {[
             { label: "Services", href: "/#services" },
+            { label: "About Us", href: "/#about" },
             { label: "Projects", href: "/#projects" },
             { label: "Safety", href: "/#safety" },
             { label: "Equipments", href: "/#equipments" },
-            { label: "About Us", href: "/#about" },
             { label: "Indigenous Engagement", href: "/indigenous-engagement" },
             { label: "Contact Us", href: "/#contact" },
             { label: "Careers", href: "/#careers" },
@@ -95,12 +95,12 @@ export default function Navbar() {
             {[
               { label: "Home", href: "/#home" },
               { label: "Services", href: "/#services" },
+              { label: "About Us", href: "/#about" },
               { label: "Projects", href: "/#projects" },
               { label: "Indigenous Engagement", href: "/indigenous-engagement" },
               { label: "Equipments", href: "/#equipments" },
               { label: "Safety", href: "/#safety" },
               { label: "Careers", href: "/#careers" },
-              { label: "About Us", href: "/#about" },
             ].map((item) => (
               <a
                 key={item.label}
