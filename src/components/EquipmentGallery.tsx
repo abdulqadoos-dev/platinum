@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 import EquipmentModal from "@/components/EquipmentModal";
 import { equipmentCards } from "@/data/equipments";
@@ -47,6 +48,7 @@ const getCardClass = (slug: string) => {
 
 export default function EquipmentGallery() {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const searchParams = useSearchParams();
   const equipmentBySlug = useMemo(
     () => new Map(equipmentCards.map((equipment) => [equipment.slug, equipment])),
     []
@@ -57,6 +59,13 @@ export default function EquipmentGallery() {
   const orientation = activeEquipment
     ? imageMeta[activeEquipment.slug]?.orientation ?? "landscape"
     : "landscape";
+
+  useEffect(() => {
+    const target = searchParams.get("item");
+    if (target && equipmentBySlug.has(target)) {
+      setActiveSlug(target);
+    }
+  }, [searchParams, equipmentBySlug]);
 
   return (
     <>

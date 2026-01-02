@@ -61,8 +61,8 @@ export default function Services() {
 
           <div className="col-span-12 lg:col-span-4 md:pr-16 ">
 
-            <div className="flex flex-col w-full">
-              <div className="flex items-center">
+            <div className="flex flex-col w-full items-center text-center md:items-start md:text-left">
+              <div className="flex items-center justify-center md:justify-start">
                 <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">Our</h1>
                 <p className="bg-secondary text-white px-2 uppercase  font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Full Rail <br className="hidden sm:block" /> Management</p>
               </div>
@@ -81,9 +81,9 @@ export default function Services() {
               {serviceFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex h-full flex-col gap-3 rounded-10 border border-secondary p-4 sm:p-5"
+                  className="flex h-full flex-col gap-3 rounded-10 border border-secondary p-4 sm:p-5 text-center md:text-left"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-white self-center md:self-start">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg md:text-xl leading-5 font-black uppercase text-primary">

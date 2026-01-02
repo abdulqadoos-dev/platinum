@@ -25,8 +25,8 @@ export default function Equipments() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-5 items-start grid-cols-1 md:grid-cols-12">
           <div className="col-span-12 lg:col-span-5 ">
-            <div className="flex flex-col w-full">
-              <div className="flex items-center">
+            <div className="flex flex-col w-full items-center text-center md:items-start md:text-left">
+              <div className="flex items-center justify-center md:justify-start">
                 <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">Our</h1>
                 <p className="bg-secondary text-white px-2 uppercase   font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">
                   Full Rail <br className="hidden sm:block" /> Management
