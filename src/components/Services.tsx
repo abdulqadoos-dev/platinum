@@ -83,15 +83,19 @@ export default function Services() {
               {serviceFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex h-full flex-col gap-3 rounded-10 border border-secondary p-4 sm:p-5 text-center md:text-left"
+                  className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl bg-white/70 p-5 text-center shadow-[0_14px_28px_rgba(22,19,74,0.08)] backdrop-blur md:text-left"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-white self-center md:self-start">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/30 to-transparent opacity-70" />
+                  <div className="relative flex h-12 w-12 items-center justify-center self-center rounded-full bg-secondary text-white shadow-[0_10px_22px_rgba(22,19,74,0.35)] md:self-start">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl leading-5 font-black uppercase text-primary">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm leading-snug text-black capitalize font-normal">
+                  <div className="relative">
+                    <h3 className="text-lg md:text-xl leading-5 font-black uppercase text-primary">
+                      {feature.title}
+                    </h3>
+                    <span className="mt-2 block h-[1px] w-14 bg-gradient-to-r from-secondary/50 via-secondary/30 to-transparent mx-auto md:mx-0" />
+                  </div>
+                  <p className="relative text-sm leading-snug text-black/80 capitalize font-normal">
                     {feature.description}
                   </p>
                 </div>
