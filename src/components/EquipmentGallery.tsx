@@ -24,10 +24,13 @@ const tallSlugs = new Set([
 
 const getCardClass = (slug: string) => {
   if (slug === "track-stabalizer") {
-    return "sm:col-span-2 sm:row-span-2";
+    return "sm:col-span-2 sm:row-span-2 lg:col-span-3 xl:col-span-4";
   }
   if (slug === "hirail-truck") {
     return "sm:col-span-2 sm:row-span-2";
+  }
+  if (slug === "hirail-grapple-truck") {
+    return "sm:row-span-2";
   }
   if (slug === "hi-rail-excavator") {
     return "sm:col-span-2 sm:row-span-2";

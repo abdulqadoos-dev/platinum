@@ -186,17 +186,6 @@ export const equipmentCards: EquipmentCard[] = [
     ),
   },
   {
-    title: "Ballast Regulator",
-    image: "/equipments/grader-scaled.jpg",
-    slug: "ballast-regulator",
-    detailImage: "/equipments/Stabalizer-3.jpg",
-    detailContent: (
-      <div className="space-y-4 text-base text-secondary">
-        <p>A ballast regulator is essential for maintaining proper track stability and alignment. It grades and shapes the track ballast, which is the crushed stone that supports and stabilizes railroad ties. By distributing and levelling the ballast, the regulator ensures that the track bed remains evenly supported, preventing uneven wear and maintaining track alignment. This equipment is crucial for adjusting the track's elevation and camber, improving the overall safety and performance of rail operations. Platinum Track utilizes advanced ballast regulators to keep your tracks in optimal condition, enhancing both operational efficiency and safety.</p>
-      </div>
-    ),
-  },
-  {
     title: "Track Stabalizer",
     image: "/equipments/Stabilizer-2.jpg",
     slug: "track-stabalizer",
@@ -209,6 +198,17 @@ export const equipmentCards: EquipmentCard[] = [
           <li>Extended Maintenance Intervals: Longer periods between maintenance activities, allowing for more efficient scheduling and resource allocation.</li>
           <li>Improved Track Geometry: Achieving a more geometrically accurate track structure, which enhances safety and ride quality for trains.</li>
         </ul>
+      </div>
+    ),
+  },
+  {
+    title: "Ballast Regulator",
+    image: "/equipments/grader-scaled.jpg",
+    slug: "ballast-regulator",
+    detailImage: "/equipments/Stabalizer-3.jpg",
+    detailContent: (
+      <div className="space-y-4 text-base text-secondary">
+        <p>A ballast regulator is essential for maintaining proper track stability and alignment. It grades and shapes the track ballast, which is the crushed stone that supports and stabilizes railroad ties. By distributing and levelling the ballast, the regulator ensures that the track bed remains evenly supported, preventing uneven wear and maintaining track alignment. This equipment is crucial for adjusting the track's elevation and camber, improving the overall safety and performance of rail operations. Platinum Track utilizes advanced ballast regulators to keep your tracks in optimal condition, enhancing both operational efficiency and safety.</p>
       </div>
     ),
   },
