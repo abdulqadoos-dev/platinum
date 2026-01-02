@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Services() {
 
@@ -61,7 +62,13 @@ export default function Services() {
 
           <div className="col-span-12 lg:col-span-4 md:pr-16 ">
 
-            <div className="flex flex-col w-full items-start text-left gap-3">
+            <motion.div
+              className="flex flex-col w-full items-start text-left gap-3"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <div className="flex w-full items-center gap-3">
                 <span className="text-xs sm:text-sm uppercase tracking-[0.45em] font-semibold text-secondary/80">
                   Our
@@ -74,16 +81,20 @@ export default function Services() {
               <p className="text-sm md:text-base uppercase tracking-[0.2em] text-secondary/60 font-semibold">
                 We provide a variety of construction services.
               </p>
-            </div>
+            </motion.div>
 
           </div>
 
           <div className="col-span-12 lg:col-span-8 ">
             <div className="grid gap-4 sm:gap-5 grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
-              {serviceFeatures.map((feature) => (
-                <div
+              {serviceFeatures.map((feature, idx) => (
+                <motion.div
                   key={feature.title}
                   className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl bg-white/70 p-5 text-center shadow-[0_14px_28px_rgba(22,19,74,0.08)] backdrop-blur md:text-left"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 + idx * 0.08 }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/30 to-transparent opacity-70" />
                   <div className="relative flex h-12 w-12 items-center justify-center self-center rounded-full bg-secondary text-white shadow-[0_10px_22px_rgba(22,19,74,0.35)] md:self-start">
@@ -98,7 +109,7 @@ export default function Services() {
                   <p className="relative text-sm leading-snug text-black/80 capitalize font-normal">
                     {feature.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -117,7 +128,7 @@ export default function Services() {
               >
                 <span className="sr-only">Previous</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
-                  <path d="M15 5L7 12L15 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M15 5L7 12L15 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
             </div>
@@ -130,7 +141,7 @@ export default function Services() {
               >
                 <span className="sr-only">Next</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
-                  <path d="M9 5L17 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M9 5L17 12L9 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
             </div>
@@ -142,12 +153,16 @@ export default function Services() {
               onMouseLeave={handleMouseLeave}
             >
 
-              {serviceCards.map((service) => (
-                <div
+              {serviceCards.map((service, idx) => (
+                <motion.div
                   key={service.title}
                   className="group relative flex-shrink-0 min-w-[80%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[25%] snap-start cursor-pointer"
                   role="link"
                   tabIndex={0}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: idx * 0.05 }}
                   onClick={() => router.push(`/services/${service.slug}`)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
@@ -164,10 +179,13 @@ export default function Services() {
                       sizes="(max-width: 640px) 85vw, (max-width: 1024px) 45vw, 20vw"
                       className="object-cover transition duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent rounded-3xl" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent rounded-3xl" />
+                    <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                      <div className="absolute inset-y-0 -left-1/3 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-12deg]" />
+                    </div>
                     <Link
                       href={`/services/${service.slug}`}
-                      className="absolute right-3 top-3 md:right-4 md:top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-secondary shadow-lg transition-transform duration-300 group-hover:-rotate-45"
+                      className="absolute right-3 top-3 md:right-4 md:top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-secondary shadow-[0_12px_25px_rgba(22,19,74,0.25)] backdrop-blur transition-transform duration-300 group-hover:-rotate-45"
                       onClick={(event) => event.stopPropagation()}
                     >
                       <span className="sr-only">View more</span>
@@ -190,7 +208,7 @@ export default function Services() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
             <div className="mt-6 flex items-center justify-center gap-2">

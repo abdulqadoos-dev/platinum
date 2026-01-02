@@ -40,11 +40,11 @@ export default function Hero() {
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-2 text-secondary/80 sm:flex-row sm:items-center sm:gap-3">
+          <div className="flex flex-col gap-2 text-secondary/80">
             <span className="text-sm sm:text-base uppercase tracking-[0.5em] font-semibold">
               You can trust
             </span>
-            <span className="h-[1px] w-full bg-gradient-to-r from-secondary/100 via-secondary/10 to-transparent sm:flex-1" />
+            <span className="h-[1px] w-44 sm:w-56 bg-gradient-to-r from-secondary/100 via-secondary/10 to-transparent" />
           </div>
         </div>
 
