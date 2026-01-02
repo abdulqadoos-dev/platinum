@@ -61,17 +61,19 @@ export default function Services() {
 
           <div className="col-span-12 lg:col-span-4 md:pr-16 ">
 
-            <div className="flex flex-col w-full items-start text-left">
-              <div className="flex items-center justify-start">
-                <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">Our</h1>
-                <p className="bg-secondary text-white px-2 uppercase  font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Full Rail <br className="hidden sm:block" /> Management</p>
+            <div className="flex flex-col w-full items-start text-left gap-3">
+              <div className="flex w-full items-center gap-3">
+                <span className="text-xs sm:text-sm uppercase tracking-[0.45em] font-semibold text-secondary/80">
+                  Our
+                </span>
+                <span className="block h-[1px] min-w-0 flex-1 bg-gradient-to-r from-secondary to-primary/70 to-transparent" />
               </div>
-
-              <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Services</h1>
-              <p className="text-lg md:text-xl lg:text-2xl leading-none  font-semibold text-secondary capitalize">
+              <div className="flex flex-wrap items-center gap-3">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Services</h1>
+              </div>
+              <p className="text-sm md:text-base uppercase tracking-[0.2em] text-secondary/60 font-semibold">
                 We provide a variety of construction services.
               </p>
-
             </div>
 
           </div>
