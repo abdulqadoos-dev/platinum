@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 left-0 w-full z-50 py-6 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-white  via-white/75 to-transparent backdrop-blur-xs">
+      <header className="sticky top-0 left-0 w-full z-50 py-6 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-white via-white/75 to-transparent backdrop-blur-xs">
         <div className="flex items-center justify-between">
         {/* Logo */}
         <a className="flex items-center " href="/#home" >
@@ -68,16 +68,21 @@ export default function Navbar() {
         </button>
       </div>
 
+    </header>
+
       {/* Mobile Navigation - Full Screen */}
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? 0 : "-100%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={`lg:hidden fixed inset-0 bg-white backdrop-blur-xs z-60 ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
+        className={`lg:hidden fixed inset-0 z-[60] bg-white ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
       >
-        <div className="flex flex-col h-full px-6 py-8 bg-white">
+        <div
+          className="relative z-10 flex flex-col h-full px-6 py-8 bg-white overflow-y-auto"
+          style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 2rem)" }}
+        >
           {/* Header with Logo and Close Button */}
-          <div className="flex items-center justify-between mb-8 bg-white">
+          <div className="flex items-center justify-between mb-4">
             <Image src="/logo.png" width={120} height={40} alt="Platinum Track Services Logo" className="w-24 sm:w-28 lg:w-[120px] h-auto" />
             <button
               onClick={() => setIsOpen(false)}
@@ -105,7 +110,7 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-4 text-lg font-medium text-secondary hover:text-primary transition"
+                className="block py-3 text-lg font-medium text-secondary hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -135,7 +140,6 @@ export default function Navbar() {
           </div>
         </div>
       </motion.div>
-    </header>
     </>
   );
 }
