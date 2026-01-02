@@ -1,38 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import Footer from "@/components/Footer";
+import EquipmentGallery from "@/components/EquipmentGallery";
 import Navbar from "@/components/Navbar";
-import { equipmentCards } from "@/data/equipments";
-
-const sizeClasses = [
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-1",
-  "sm:col-span-1 sm:row-span-2",
-  "sm:col-span-1 sm:row-span-1",
-];
-
-const tallSlugs = new Set([
-  "railavator",
-  "mark-iv",
-  "spike-puller",
-  "hirail-truck",
-  "spiker",
-]);
-
-const getCardClass = (slug: string) => {
-  if (slug === "hi-rail-excavator") {
-    return "sm:col-span-2 sm:row-span-2";
-  }
-  if (tallSlugs.has(slug)) {
-    return "sm:row-span-2";
-  }
-  let hash = 0;
-  for (let i = 0; i < slug.length; i += 1) {
-    hash = (hash * 31 + slug.charCodeAt(i)) >>> 0;
-  }
-  return sizeClasses[hash % sizeClasses.length];
-};
 
 export default function EquipmentPage() {
   return (
@@ -62,35 +30,7 @@ export default function EquipmentPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid auto-rows-[160px] grid-flow-dense gap-8 sm:auto-rows-[180px] sm:grid-cols-2 lg:auto-rows-[200px] lg:grid-cols-3 xl:grid-cols-4">
-          {equipmentCards.map((equipment) => (
-            <Link
-              key={equipment.slug}
-              href={`/equipment/${equipment.slug}`}
-              className={`relative col-span-1 row-span-1 min-h-[160px] overflow-hidden rounded-2xl group ${
-                equipment.slug === "track-stabalizer"
-                  ? "sm:col-span-2 sm:row-span-2"
-                  : getCardClass(equipment.slug)
-              }`}
-            >
-              <Image
-                src={equipment.image}
-                alt={equipment.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-              <div className="absolute bottom-4 right-4">
-                <div className="flex items-center justify-center px-3 py-2 bg-black/35 border border-white/80 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    {equipment.title}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <EquipmentGallery />
       </section>
       <Footer />
     </div>

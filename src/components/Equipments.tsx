@@ -1,7 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo, useState } from "react";
+
+import EquipmentModal from "@/components/EquipmentModal";
+import { equipmentCards } from "@/data/equipments";
+import { equipmentImageMeta } from "@/data/equipmentImageMeta";
 
 export default function Equipments() {
+  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const equipmentBySlug = useMemo(
+    () => new Map(equipmentCards.map((equipment) => [equipment.slug, equipment])),
+    []
+  );
+  const activeEquipment = activeSlug ? equipmentBySlug.get(activeSlug) ?? null : null;
+  const imageMeta = equipmentImageMeta as Record<string, { orientation: "portrait" | "landscape" }>;
+  const orientation = activeEquipment
+    ? imageMeta[activeEquipment.slug]?.orientation ?? "landscape"
+    : "landscape";
+
   return (
     <section id="equipments" className="bg-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 text-secondary">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -23,7 +41,11 @@ export default function Equipments() {
           </div>
 
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
-            <Link href="/equipment/float-truck" className="relative h-[200px] rounded-2xl overflow-hidden group block">
+            <button
+              type="button"
+              onClick={() => setActiveSlug("float-truck")}
+              className="relative h-[200px] w-full rounded-2xl overflow-hidden group block text-left"
+            >
               <Image
                 src="/equipments/Float-Truck.jpg"
                 alt="Float Truck"
@@ -39,11 +61,15 @@ export default function Equipments() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </button>
           </div>
 
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
-            <Link href="/equipment/jr-tamper" className="relative h-[200px] rounded-2xl overflow-hidden group block">
+            <button
+              type="button"
+              onClick={() => setActiveSlug("jr-tamper")}
+              className="relative h-[200px] w-full rounded-2xl overflow-hidden group block text-left"
+            >
               <Image
                 src="/equipments/jr-tamper.jpg"
                 alt="JR Tamper"
@@ -59,13 +85,17 @@ export default function Equipments() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </button>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 mt-8">
           <div className="w-full md:w-2/5 flex flex-col gap-6">
-            <Link href="/equipment/mark-iv" className="relative h-[228px] rounded-2xl overflow-hidden group block">
+            <button
+              type="button"
+              onClick={() => setActiveSlug("mark-iv")}
+              className="relative h-[228px] w-full rounded-2xl overflow-hidden group block text-left"
+            >
               <Image
                 src="/equipments/Pics-Mark-IV.jpg"
                 alt="Pics-Mark IV"
@@ -80,9 +110,13 @@ export default function Equipments() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </button>
 
-            <Link href="/equipment/track-stabalizer" className="relative h-[228px] rounded-2xl overflow-hidden group block">
+            <button
+              type="button"
+              onClick={() => setActiveSlug("track-stabalizer")}
+              className="relative h-[228px] w-full rounded-2xl overflow-hidden group block text-left"
+            >
               <Image
                 src="/equipments/Stabilizer.jpg"
                 alt="Stabilizer"
@@ -97,11 +131,15 @@ export default function Equipments() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </button>
           </div>
 
           <div className="w-full md:w-3/5 flex gap-6">
-            <Link href="/equipment/hirail-truck" className="relative h-[480px] flex-1 rounded-2xl overflow-hidden group block">
+            <button
+              type="button"
+              onClick={() => setActiveSlug("cn-rail")}
+              className="relative h-[480px] flex-1 rounded-2xl overflow-hidden group block text-left"
+            >
               <Image
                 src="/equipments/cn-rail.jpg"
                 alt="CN Rail"
@@ -116,11 +154,12 @@ export default function Equipments() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </button>
 
-            <Link
-              href="/equipment/ballast-regulator"
-              className="relative h-[480px] flex-1 rounded-2xl overflow-hidden hidden lg:block group"
+            <button
+              type="button"
+              onClick={() => setActiveSlug("mat-distr-pu")}
+              className="relative h-[480px] flex-1 rounded-2xl overflow-hidden hidden lg:block group text-left"
             >
               <Image
                 src="/equipments/Mat-Distr-PU.jpg"
@@ -136,7 +175,7 @@ export default function Equipments() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -149,6 +188,14 @@ export default function Equipments() {
           </Link>
         </div>
       </div>
+      {activeEquipment ? (
+        <EquipmentModal
+          equipment={activeEquipment}
+          orientation={orientation}
+          isOpen={Boolean(activeEquipment)}
+          onClose={() => setActiveSlug(null)}
+        />
+      ) : null}
     </section>
   );
 }

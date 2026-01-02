@@ -10,6 +10,28 @@ export type EquipmentCard = {
 
 export const equipmentCards: EquipmentCard[] = [
   {
+    title: "CN Rail",
+    image: "/equipments/cn-rail.jpg",
+    slug: "cn-rail",
+    detailImage: "/equipments/cn-rail.jpg",
+    detailContent: (
+      <div className="space-y-4 text-base text-secondary">
+        <p>Canadian National Railway (CN) is a Canadian Class I freight railway headquartered in Montreal, Quebec. The network serves Canada and the Midwestern and Southern United States, operating one of North America's largest rail systems alongside Canadian Pacific Kansas City.</p>
+      </div>
+    ),
+  },
+  {
+    title: "Mat Distr & PU",
+    image: "/equipments/Mat-Distr-PU.jpg",
+    slug: "mat-distr-pu",
+    detailImage: "/equipments/Mat-Distr-PU.jpg",
+    detailContent: (
+      <div className="space-y-4 text-base text-secondary">
+        <p>Material Distribution & Pickup units support rail projects by staging, delivering, and recovering ballast, ties, rail, and tooling. These systems improve jobsite flow, reduce handling time, and keep production gangs supplied with the right materials at the right time.</p>
+      </div>
+    ),
+  },
+  {
     title: "Float Truck",
     image: "/equipments/Float-Truck.jpg",
     slug: "float-truck",
