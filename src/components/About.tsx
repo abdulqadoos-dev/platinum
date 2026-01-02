@@ -4,29 +4,166 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const people = [
-  { name: "Mike Sousa", role: "Founder, Chief Executive Officer", image: "/peoples/Mike%20Sousa,%20Founder,%20Chief%20Executive%20Officer.jpg" },
-  { name: "M Saeed", role: "Chief Financial Officer", image: "/peoples/M%20Saeed,%20Chief%20Financial%20Officer.jpeg" },
-  { name: "Rick Haggart", role: "Director of Track Strategy & Advisory", image: "/peoples/Rick%20Haggart%20-%20Director%20of%20Track%20Strategy%20&%20Advisory.png" },
-  { name: "Michael Sousa", role: "Operations Manager", image: "/peoples/Michael%20Sousa%20-%20Operations%20Manager.jpg" },
-  { name: "Jim Violin", role: "Business Development", image: "/peoples/Jim%20Violin%20-%20Business%20Development.png" },
-  { name: "Julie Sousa", role: "Accounts Receivable", image: "/peoples/Julie%20Sousa%20-%20Accounts%20Receivable.jpg" },
-  { name: "Krissy Stephenson", role: "Administrative Assistant", image: "/peoples/Krissy%20Stephenson%20-%20Administrative%20Assistant.jpg" },
-  { name: "Laurie Toth", role: "Logistics Coordinator", image: "/peoples/Laurie%20Toth%20-%20Logistics%20Coordinator.png" },
-  { name: "Lidia Daood", role: "Accounts Payable", image: "/peoples/Lidia%20Daood%20-%20Accounts%20Payable.jpg" },
-  { name: "Lily Sousa", role: "Fleet Administrator", image: "/peoples/Lily%20Sousa%20-%20Fleet%20Administrator.jpeg" },
-  { name: "Manprit Nijjar", role: "Controller", image: "/peoples/Manprit%20Nijjar%20-%20Controller.jpeg" },
-  { name: "Martina Bellemore", role: "Assistant Controller", image: "/peoples/Martina%20Bellemore%20-%20Assistant%20Controller.png" },
-  { name: "Mike Cipparone", role: "Fleet Supervisor", image: "/peoples/Mike%20Cipparone%20-%20Fleet%20Supervisor.jpg" },
-  { name: "Nick Nielsen", role: "Chief Track Systems Specialist", image: "/peoples/Nick%20Nielsen%20-%20Chief%20Track%20Systems%20Specialist.png" },
-  { name: "Sarah Roth", role: "Payroll Supervisor", image: "/peoples/Sarah%20Roth%20-%20Payroll%20Supervisor.jpg" },
-  { name: "Theresa Nash", role: "Health and Safety Officer", image: "/peoples/Theresa%20Nash,%20Health%20and%20Safety%20Officer.JPG" },
-  { name: "Wendrys DaSilva", role: "Financial Analyst", image: "/peoples/Wendrys%20DaSilva%20-%20Financial%20Analyst.jpg" },
+  {
+    name: "Mike Sousa",
+    role: "Founder, Chief Executive Officer",
+    image: "/peoples/Mike%20Sousa,%20Founder,%20Chief%20Executive%20Officer.jpg",
+    bio:
+      "Founder and CEO with multi-decade rail construction leadership across North America. Focused on safe delivery, operational excellence, and long-term client partnerships.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Leadership",
+  },
+  {
+    name: "M Saeed",
+    role: "Chief Financial Officer",
+    image: "/peoples/M%20Saeed,%20Chief%20Financial%20Officer.jpeg",
+    bio:
+      "Leads financial strategy, controls, and long-range planning to support sustainable growth and capital efficiency.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
+  {
+    name: "Rick Haggart",
+    role: "Director of Track Strategy & Advisory",
+    image: "/peoples/Rick%20Haggart%20-%20Director%20of%20Track%20Strategy%20&%20Advisory.png",
+    bio:
+      "Advises on track systems strategy, engineering standards, and execution approaches for complex programs.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Strategy",
+  },
+  {
+    name: "Michael Sousa",
+    role: "Operations Manager",
+    image: "/peoples/Michael%20Sousa%20-%20Operations%20Manager.jpg",
+    bio:
+      "Oversees field operations, coordinating crews, equipment, and schedule commitments across multiple regions.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Operations",
+  },
+  {
+    name: "Jim Violin",
+    role: "Business Development",
+    image: "/peoples/Jim%20Violin%20-%20Business%20Development.png",
+    bio:
+      "Builds client relationships and project pipelines, aligning service capabilities with customer needs.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Growth",
+  },
+  {
+    name: "Julie Sousa",
+    role: "Accounts Receivable",
+    image: "/peoples/Julie%20Sousa%20-%20Accounts%20Receivable.jpg",
+    bio:
+      "Manages receivables and client billing with focus on accuracy, reporting, and timely collections.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
+  {
+    name: "Krissy Stephenson",
+    role: "Administrative Assistant",
+    image: "/peoples/Krissy%20Stephenson%20-%20Administrative%20Assistant.jpg",
+    bio:
+      "Supports executive operations, communications, and daily administrative coordination.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Administration",
+  },
+  {
+    name: "Laurie Toth",
+    role: "Logistics Coordinator",
+    image: "/peoples/Laurie%20Toth%20-%20Logistics%20Coordinator.png",
+    bio:
+      "Coordinates material distribution, fleet movement, and onsite logistics across projects.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Logistics",
+  },
+  {
+    name: "Lidia Daood",
+    role: "Accounts Payable",
+    image: "/peoples/Lidia%20Daood%20-%20Accounts%20Payable.jpg",
+    bio:
+      "Handles vendor payments and internal cost tracking to ensure clean financial operations.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
+  {
+    name: "Lily Sousa",
+    role: "Fleet Administrator",
+    image: "/peoples/Lily%20Sousa%20-%20Fleet%20Administrator.jpeg",
+    bio:
+      "Manages fleet documentation, compliance, and readiness for field deployment.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Fleet",
+  },
+  {
+    name: "Manprit Nijjar",
+    role: "Controller",
+    image: "/peoples/Manprit%20Nijjar%20-%20Controller.jpeg",
+    bio:
+      "Oversees accounting, reporting, and internal controls to support informed decision-making.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
+  {
+    name: "Martina Bellemore",
+    role: "Assistant Controller",
+    image: "/peoples/Martina%20Bellemore%20-%20Assistant%20Controller.png",
+    bio:
+      "Supports financial reporting, reconciliations, and operational analysis.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
+  {
+    name: "Mike Cipparone",
+    role: "Fleet Supervisor",
+    image: "/peoples/Mike%20Cipparone%20-%20Fleet%20Supervisor.jpg",
+    bio:
+      "Supervises fleet operations and maintenance to maximize uptime and reliability.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Fleet",
+  },
+  {
+    name: "Nick Nielsen",
+    role: "Chief Track Systems Specialist",
+    image: "/peoples/Nick%20Nielsen%20-%20Chief%20Track%20Systems%20Specialist.png",
+    bio:
+      "Leads technical systems expertise, ensuring high-quality track delivery and standards compliance.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Engineering",
+  },
+  {
+    name: "Sarah Roth",
+    role: "Payroll Supervisor",
+    image: "/peoples/Sarah%20Roth%20-%20Payroll%20Supervisor.jpg",
+    bio:
+      "Ensures accurate payroll processing, compliance, and reporting across teams.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "HR",
+  },
+  {
+    name: "Theresa Nash",
+    role: "Health and Safety Officer",
+    image: "/peoples/Theresa%20Nash,%20Health%20and%20Safety%20Officer.JPG",
+    bio:
+      "Leads safety programs, compliance, and field training to uphold operational excellence.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Safety",
+  },
+  {
+    name: "Wendrys DaSilva",
+    role: "Financial Analyst",
+    image: "/peoples/Wendrys%20DaSilva%20-%20Financial%20Analyst.jpg",
+    bio:
+      "Provides analytical insights to support budgeting, forecasting, and project controls.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
 ];
 
 export default function About() {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTab, setActiveTab] = useState<"key" | "team">("key");
+  const [activePerson, setActivePerson] = useState<(typeof people)[number] | null>(null);
 
   const keyMembers = new Set([
     "Mike Sousa",
@@ -42,7 +179,7 @@ export default function About() {
 
   useEffect(() => {
     const container = sliderRef.current;
-    if (!container) return;
+    if (!container || !visiblePeople.length) return;
     const target = container.children[activeIndex] as HTMLElement | undefined;
     if (target) {
       container.scrollTo({
@@ -54,10 +191,10 @@ export default function About() {
 
   const scrollSlider = (direction: "next" | "prev") => {
     setActiveIndex((prev) => {
-      const count = visiblePeople.length || 1;
-      if (direction === "next") return (prev + 1) % count;
-      return (prev - 1 + count) % count;
-    });
+    const count = visiblePeople.length;
+    if (direction === "next") return (prev + 1) % count;
+    return (prev - 1 + count) % count;
+  });
   };
 
   return (
@@ -181,10 +318,19 @@ export default function About() {
             className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
           >
             {visiblePeople.map((person) => (
-              <div
-                key={person.name}
-                className="group relative flex-shrink-0 min-w-[80%] sm:min-w-[55%] md:min-w-[40%] lg:min-w-[20%] snap-start"
-              >
+                <div
+                  key={person.name}
+                  className="group relative flex-shrink-0 min-w-[80%] sm:min-w-[55%] md:min-w-[40%] lg:min-w-[20%] snap-start"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setActivePerson(person)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setActivePerson(person);
+                    }
+                  }}
+                >
                 <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
                   <Image
                     src={person.image}
@@ -211,6 +357,80 @@ export default function About() {
         </div>
 
       </div>
+      {activePerson ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6 sm:px-6">
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={() => setActivePerson(null)}
+          />
+          <div className="relative z-10 w-full max-w-4xl max-h-[85vh] overflow-y-auto rounded-3xl border border-primary/20 bg-white/95 p-5 sm:p-6 shadow-[0_30px_80px_rgba(168,31,39,0.2)] backdrop-blur">
+            <button
+              type="button"
+              onClick={() => setActivePerson(null)}
+              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-secondary/10 bg-white text-secondary hover:text-primary transition"
+              aria-label="Close modal"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18" />
+                <path d="M6 6L18 18" />
+              </svg>
+            </button>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_1.4fr] md:items-center">
+              <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden rounded-2xl">
+                <Image
+                  src={activePerson.image}
+                  alt={activePerson.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                <div className="absolute left-4 top-4 rounded-full border border-white/40 bg-white/70 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  {activePerson.tag}
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-secondary/60">Team Profile</p>
+                  <h3 className="mt-2 text-3xl font-extrabold text-primary">{activePerson.name}</h3>
+                  <p className="text-base font-semibold text-secondary">{activePerson.role}</p>
+                </div>
+                <p className="text-secondary text-sm leading-relaxed">{activePerson.bio}</p>
+                <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-secondary/60">
+                  <span className="rounded-full border border-secondary/20 bg-white px-4 py-2">
+                    {activePerson.tag}
+                  </span>
+                  <span className="rounded-full border border-secondary/20 bg-white px-4 py-2">
+                    Platinum Track Services
+                  </span>
+                </div>
+                <a
+                  href={activePerson.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#0A66C2] px-5 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(10,102,194,0.3)] transition hover:opacity-90"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.9 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.9 1 4.98 2.12 4.98 3.5Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M0.5 8H4.5V23H0.5V8Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M8.5 8H12.3V10.2H12.35C12.88 9.2 14.2 8.1 16.1 8.1C20.2 8.1 21 10.7 21 14.1V23H17V15.1C17 13.2 17 10.7 14.4 10.7C11.7 10.7 11.3 12.9 11.3 15V23H7.3V8H8.5Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }
