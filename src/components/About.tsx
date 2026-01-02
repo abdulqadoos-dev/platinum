@@ -6,48 +6,48 @@ import { useEffect, useRef, useState } from "react";
 const people = [
   {
     name: "Mike Sousa",
-    role: "Founder, Chief Executive Officer",
+    role: "Chief Executive Officer, Platinum Track Services Inc.",
     image: "/peoples/Mike%20Sousa,%20Founder,%20Chief%20Executive%20Officer.jpg",
     bio:
-      "Founder and CEO with multi-decade rail construction leadership across North America. Focused on safe delivery, operational excellence, and long-term client partnerships.",
-    linkedin: "https://www.linkedin.com/",
+      "Mike Sousa is the founder and CEO of Platinum Track Services Inc., with 30+ years in railroad construction, maintenance, and operations. He leads company strategy, safety, and delivery across North America while building high-performance teams and trusted client partnerships.",
+    linkedin: "https://ca.linkedin.com/in/mike-sousa-1b1106b0",
     tag: "Leadership",
   },
   {
-    name: "M Saeed",
-    role: "Chief Financial Officer",
+    name: "Minha Saeed",
+    role: "Chief Financial Officer, Platinum Track Services Inc.",
     image: "/peoples/M%20Saeed,%20Chief%20Financial%20Officer.jpeg",
     bio:
-      "Leads financial strategy, controls, and long-range planning to support sustainable growth and capital efficiency.",
-    linkedin: "https://www.linkedin.com/",
+      "Minha Saeed, CPA, CA, is CFO at Platinum Track Services Inc., leading financial strategy, controls, and compliance. She oversees budgeting, forecasting, and ERP integrations to support disciplined growth and operational alignment.",
+    linkedin: "https://ca.linkedin.com/in/minha-saeed-cpa-ca-32682019",
     tag: "Finance",
   },
   {
     name: "Rick Haggart",
-    role: "Director of Track Strategy & Advisory",
+    role: "Director of Track & Business Development",
     image: "/peoples/Rick%20Haggart%20-%20Director%20of%20Track%20Strategy%20&%20Advisory.png",
     bio:
-      "Advises on track systems strategy, engineering standards, and execution approaches for complex programs.",
+      "Rick S. Haggart is Director of Track & Business Development with 44+ years in rail and transit infrastructure. He previously led CN Rail engineering in Eastern Canada and now drives engineering oversight, safety, and growth for major programs.",
     linkedin: "https://www.linkedin.com/",
-    tag: "Strategy",
+    tag: "Track & Business Development",
   },
   {
     name: "Michael Sousa",
-    role: "Operations Manager",
+    role: "VP Operations, Platinum Track Services Inc.",
     image: "/peoples/Michael%20Sousa%20-%20Operations%20Manager.jpg",
     bio:
-      "Oversees field operations, coordinating crews, equipment, and schedule commitments across multiple regions.",
-    linkedin: "https://www.linkedin.com/",
+      "Mike Sousa Jr. leads daily operations at Platinum Track Services Inc., ensuring safe, efficient execution across projects in Canada and North America. He focuses on workforce coordination, compliance, and delivery standards.",
+    linkedin: "https://ca.linkedin.com/in/mike-sousa-jr-4165271a2",
     tag: "Operations",
   },
   {
     name: "Jim Violin",
-    role: "Business Development",
+    role: "Vice President, Business Development",
     image: "/peoples/Jim%20Violin%20-%20Business%20Development.png",
     bio:
-      "Builds client relationships and project pipelines, aligning service capabilities with customer needs.",
-    linkedin: "https://www.linkedin.com/",
-    tag: "Growth",
+      "Jim Violin is Vice President, Business Development with 40+ years of executive experience in operations and commercial strategy. He leads growth initiatives, partnerships, and complex negotiations to expand Platinum Track's market presence.",
+    linkedin: "https://ca.linkedin.com/in/jim-violin-42489b73",
+    tag: "Business Development",
   },
   {
     name: "Julie Sousa",
@@ -123,10 +123,10 @@ const people = [
   },
   {
     name: "Nick Nielsen",
-    role: "Chief Track Systems Specialist",
+    role: "Chief Track Specialist",
     image: "/peoples/Nick%20Nielsen%20-%20Chief%20Track%20Systems%20Specialist.png",
     bio:
-      "Leads technical systems expertise, ensuring high-quality track delivery and standards compliance.",
+      "Nick Nielsen is Chief Track Specialist with 40+ years across freight rail, LRT, and heavy haul corridors. He provides technical direction, standards leadership, and safety-focused engineering oversight for complex track programs.",
     linkedin: "https://www.linkedin.com/",
     tag: "Engineering",
   },
@@ -167,7 +167,7 @@ export default function About() {
 
   const keyMembers = new Set([
     "Mike Sousa",
-    "M Saeed",
+    "Minha Saeed",
     "Michael Sousa",
     "Jim Violin",
     "Rick Haggart",

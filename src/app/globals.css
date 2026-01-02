@@ -17,11 +17,11 @@ html {
 /* Slim themed scrollbar */
 .scrollbar-slim {
   scrollbar-width: thin;
-  scrollbar-color: rgba(168, 31, 39, 0.75) transparent;
+  scrollbar-color: rgba(168, 31, 39, 0.9) transparent;
 }
 
 .scrollbar-slim::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .scrollbar-slim::-webkit-scrollbar-track {
@@ -29,12 +29,13 @@ html {
 }
 
 .scrollbar-slim::-webkit-scrollbar-thumb {
-  background: rgba(168, 31, 39, 0.8);
+  background: linear-gradient(180deg, rgba(168, 31, 39, 0.95), rgba(22, 19, 74, 0.75));
   border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 }
 
 .scrollbar-slim::-webkit-scrollbar-thumb:hover {
-  background: rgba(168, 31, 39, 1);
+  background: linear-gradient(180deg, rgba(168, 31, 39, 1), rgba(22, 19, 74, 0.9));
 }
 
 :root {
