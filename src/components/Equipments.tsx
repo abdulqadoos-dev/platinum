@@ -53,11 +53,9 @@ export default function Equipments() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute bottom-6 right-6">
-                <div className="flex items-center justify-center px-4 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-sm sm:text-base capitalize">
-                    Float Truck
-                  </p>
+              <div className="absolute left-4 top-4">
+                <div className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  Float Truck
                 </div>
               </div>
             </button>
@@ -77,11 +75,9 @@ export default function Equipments() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute bottom-6 right-6">
-                <div className="flex items-center justify-center px-4 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-sm sm:text-base capitalize">
-                    JR Tamper
-                  </p>
+              <div className="absolute left-4 top-4">
+                <div className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  JR Tamper
                 </div>
               </div>
             </button>
@@ -102,11 +98,9 @@ export default function Equipments() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute bottom-4 right-4">
-                <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Pics-Mark IV
-                  </p>
+              <div className="absolute left-4 top-4">
+                <div className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  Pics-Mark IV
                 </div>
               </div>
             </button>
@@ -123,11 +117,9 @@ export default function Equipments() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute bottom-4 right-4">
-                <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Stabilizer
-                  </p>
+              <div className="absolute left-4 top-4">
+                <div className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  Stabilizer
                 </div>
               </div>
             </button>
@@ -146,11 +138,9 @@ export default function Equipments() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute bottom-4 right-4">
-                <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    CN Rail
-                  </p>
+              <div className="absolute left-4 top-4">
+                <div className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  CN Rail
                 </div>
               </div>
             </button>
@@ -167,11 +157,9 @@ export default function Equipments() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute bottom-4 right-4">
-                <div className="flex items-center justify-center px-3 py-2 bg-black/25 border border-white/90 backdrop-blur-sm rounded-lg">
-                  <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                    Mat Distr & PU
-                  </p>
+              <div className="absolute left-4 top-4">
+                <div className="rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                  Mat Distr & PU
                 </div>
               </div>
             </button>

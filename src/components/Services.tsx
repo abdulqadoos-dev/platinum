@@ -90,7 +90,7 @@ export default function Services() {
               {serviceFeatures.map((feature, idx) => (
                 <motion.div
                   key={feature.title}
-                  className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl bg-white/70 p-5 text-center shadow-[0_14px_28px_rgba(22,19,74,0.08)] backdrop-blur md:text-left"
+                  className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-secondary/15 bg-white/70 p-5 text-center shadow-[0_14px_28px_rgba(22,19,74,0.08)] backdrop-blur md:text-left"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.4 }}

@@ -87,12 +87,8 @@ export default function EquipmentGallery() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-            <div className="absolute bottom-4 right-4">
-              <div className="flex items-center justify-center px-3 py-2 bg-black/35 border border-white/80 backdrop-blur-sm rounded-lg">
-                <p className="text-white font-semibold text-xs sm:text-sm capitalize">
-                  {equipment.title}
-                </p>
-              </div>
+            <div className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+              {equipment.title}
             </div>
           </button>
         ))}

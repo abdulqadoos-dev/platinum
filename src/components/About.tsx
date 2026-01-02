@@ -202,28 +202,33 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* HEADING SECTION */}
-        <div className="flex flex-col md:gap-3 lg:flex-row items-start lg:items-center ">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none text-nowrap">
+        <div className="flex flex-col gap-3 items-start">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.45em] font-semibold text-secondary/70">
             About us
+          </span>
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none">
+            40 Years Of Experience
           </h1>
-          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2 md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
-            40 Years Of Experience And<br className="hidden sm:block" />Spanning Three Generations
-          </div>
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold text-secondary/70">
+            Spanning Three Generations
+          </h2>
+          <span className="h-[1px] w-40 bg-gradient-to-r from-secondary/80 via-secondary/30 to-transparent" />
         </div>
 
         {/* LEFT ITEMS + PARAGRAPH */}
         <div className="grid grid-cols-1 lg:grid-cols-8 items-center gap-8 md:gap-10 mt-10 mb-12 md:mb-16">
 
           {/* LEFT LOGO */}
-          <div className="col-span-8 md:col-span-2">
-            <div className="flex items-start justify-start">
-              <div className="relative h-36 w-full">
+          <div className="col-span-8 md:col-span-2 self-stretch">
+            <div className="flex h-full items-start justify-start">
+              <div className="flex h-full w-full items-center justify-center rounded-2xl border border-secondary/15 bg-white/70 px-8 py-6 shadow-[0_18px_40px_rgba(22,19,74,0.12)] backdrop-blur">
                 <Image
                   src="/logo.png"
                   alt="Platinum Track Services"
-                  fill
-                  sizes="(max-width: 768px) 160px, 180px"
-                  className="object-contain"
+                  width={240}
+                  height={120}
+                  sizes="(max-width: 768px) 180px, 220px"
+                  className="h-auto w-full max-w-[200px] sm:max-w-[220px]"
                 />
               </div>
             </div>
@@ -244,7 +249,7 @@ export default function About() {
             </h2>
 
             {/* RED STRIP */}
-            <div className="inline-block bg-primary text-white text-sm md:text-xl font-bold px-4 md:px-2 ">
+            <div className="inline-block rounded-[5px] bg-primary text-white text-sm md:text-xl font-bold px-4 md:px-2 py-1">
               Our Journey To Become One Of The Largest Rail Contractors.
             </div>
 

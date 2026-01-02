@@ -142,15 +142,19 @@ export default function Safety() {
     <section id="safety" className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div className="flex flex-col w-full">
-
-          <h1 className="text-3xl md:text-5xl lg:text-7xl  text-primary font-extrabold uppercase">A Priority in</h1>
-
-          <div className="flex items-center">
-            <h1 className="text-3xl md:text-5xl lg:text-7xl text-primary font-extrabold uppercase">Safety</h1>
-            <p className="bg-secondary text-white px-2 uppercase font-bold text-xs lg:text-xl leading-none py-1 lg:mt-1">Our Services Revole <br className="hidden sm:block" /> Around Safety</p>
+        <div className="flex flex-col w-full items-start gap-3">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.45em] font-semibold text-secondary/70">
+            A Priority in
+          </span>
+          <div className="flex w-full items-center gap-4">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none uppercase">
+              Safety
+            </h1>
           </div>
-
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold text-secondary/70">
+            Our Services Revole Around Safety
+          </h2>
+          <span className="h-[1px] w-44 bg-gradient-to-r from-secondary/80 via-secondary/30 to-transparent" />
         </div>
 
 
@@ -158,39 +162,53 @@ export default function Safety() {
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 md:gap-10 mb-12 md:mb-16">
 
           {/* LEFT LIST */}
-          <div className="space-y-6 mt-10 lg:col-span-2 hidden lg:block">
+          <div className="space-y-4 mt-10 lg:col-span-2 hidden lg:block">
             {items.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <span className="w-8 md:w-10 h-0.5 bg-primary"></span>
-                <span className="text-primary font-semibold text-base md:text-lg">{item.label}</span>
+              <div key={index} className="flex items-center gap-3">
+                <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_rgba(168,31,39,0.5)]"></span>
+                <span className="text-primary font-semibold text-sm md:text-base uppercase tracking-[0.2em]">
+                  {item.label}
+                </span>
               </div>
             ))}
           </div>
 
           {/* RIGHT PARAGRAPH */}
           <div className="space-y-10 mt-10 lg:col-span-6">
-            <p className="text-white bg-secondary px-5 py-1 md:py-2 text-sm font-semibold leading-relaxed md:leading-6">
-              Our clients can trust that we meet all safety training, certification, and third-party verification standards. Our goal is to be the safest rail service provider in the U.S. We emphasize safety daily, fostering a team approach and empowering employees to prioritize it, creating a positive safety culture.
-            </p>
+            <div className="relative overflow-hidden rounded-2xl border border-secondary/15 bg-secondary p-5 shadow-[0_14px_28px_rgba(22,19,74,0.18)]">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
+              <p className="relative text-white text-sm md:text-base font-semibold leading-relaxed md:leading-6">
+                Our clients can trust that we meet all safety training, certification, and third-party verification standards. Our goal is to be the safest rail service provider in the U.S. We emphasize safety daily, fostering a team approach and empowering employees to prioritize it, creating a positive safety culture.
+              </p>
+            </div>
 
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-              <h2 className="text-xl md:text-4xl col-span-2 lg:col-span-2 font-black text-primary capitalize leading-tight md:leading-[1.15]">
-                How we ensure <br className="hidden sm:block" />safety excellence.
-              </h2>
+              <div className="col-span-1 sm:col-span-2 lg:col-span-2 flex items-center justify-center lg:justify-start">
+                <h2 className="text-3xl md:text-5xl font-black text-primary capitalize leading-tight md:leading-[1.1] text-center lg:text-left">
+                  How we ensure <br className="hidden sm:block" />safety excellence.
+                </h2>
+              </div>
 
               {boxes.map((box, index) => {
 
                 return (
-                  <div key={index} className="bg-white rounded-xl border border-secondary p-2  space-y-2 transition">
-                    <div className={`w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-white`}>
+                  <div
+                    key={index}
+                    className="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-secondary/15 bg-white/70 p-5 text-left shadow-[0_14px_28px_rgba(22,19,74,0.08)] backdrop-blur transition"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/30 to-transparent opacity-70" />
+                    <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-white shadow-[0_10px_22px_rgba(22,19,74,0.35)]">
                       {box.icon}
                     </div>
-                    <h3 className={`text-primary font-black text-base leading-5 md:text-lg `}>
-                      {box.title}
-                    </h3>
-                    <p className="text-secondary text-xs ">
+                    <div className="relative">
+                      <h3 className="text-primary font-black text-base leading-5 md:text-lg">
+                        {box.title}
+                      </h3>
+                      <span className="mt-2 block h-[1px] w-14 bg-gradient-to-r from-secondary/50 via-secondary/30 to-transparent" />
+                    </div>
+                    <p className="relative text-secondary text-xs">
                       {box.description}
                     </p>
                   </div>
