@@ -15,11 +15,12 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
+        poster="/platinum-video-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="/background-video.mp4"
+          src="/platinum-video-optimized.mp4"
           type="video/mp4"
         />
       </video>
