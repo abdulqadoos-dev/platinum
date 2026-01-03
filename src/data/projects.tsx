@@ -27,16 +27,16 @@ export const projectItems: ProjectCard[] = [
     location: "North Bay, Ontario",
     contact: "Merick Letourneau",
     value: "+$16,000,000 (2025)",
-    image: "/projects/ontc north bay/main.jpg",
+    image: "/projects/ONTC North Bay, Ontario/main.jpg",
     images: [
-      "/projects/ontc north bay/main.jpg",
-      "/projects/ontc north bay/3.jpg",
-      "/projects/ontc north bay/4.jpg",
-      "/projects/ontc north bay/5.jpg",
-      "/projects/ontc north bay/6.jpg",
-      "/projects/ontc north bay/8.jpg",
-      "/projects/ontc north bay/9.jpg",
-      "/projects/ontc north bay/10.jpg",
+      "/projects/ONTC North Bay, Ontario/main.jpg",
+      "/projects/ONTC North Bay, Ontario/3.jpg",
+      "/projects/ONTC North Bay, Ontario/4.jpg",
+      "/projects/ONTC North Bay, Ontario/5.jpg",
+      "/projects/ONTC North Bay, Ontario/6.jpg",
+      "/projects/ONTC North Bay, Ontario/8.jpg",
+      "/projects/ONTC North Bay, Ontario/9.jpg",
+      "/projects/ONTC North Bay, Ontario/10.jpg",
     ],
     slug: "ontc-north-bay-rail-tie-program",
     tags: ["Rail", "Tie", "Turnouts"],
@@ -140,12 +140,19 @@ export const projectItems: ProjectCard[] = [
     ),
   },
   {
-    title: "Metrolinx ROW Maintenance & Rail Program",
+    title: "METROLINX – Toronto (GTA), Ontario",
     date: "September 18, 2024",
     description:
       "GTA-wide state-of-good-repair and rail programs with coordinated shutdown windows.",
-    image:
-      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=900&q=80",
+    location: "Toronto (GTA), Ontario",
+    contact: "Mario Sgandurra",
+    value: "$9,000,000",
+    image: "/projects/METROLINX – Toronto (GTA), Ontario/main.jpg",
+    images: [
+      "/projects/METROLINX – Toronto (GTA), Ontario/main.jpg",
+      "/projects/METROLINX – Toronto (GTA), Ontario/17.jpg",
+      "/projects/METROLINX – Toronto (GTA), Ontario/19.jpg",
+    ],
     slug: "metrolinx-row-maintenance-rail-program",
     tags: ["ROW", "Crossings", "Inspections"],
     statusLabel: "Project Status",
@@ -159,32 +166,50 @@ export const projectItems: ProjectCard[] = [
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          Metrolinx contracts for ROW maintenance, state-of-good-repair, and rail programs across 2023–2025.
+          Various contracts throughout the Metrolinx system. ROW maintenance program, State of Good Repair,
+          and rail program for 2023, 2024, and 2025.
         </p>
         <div>
           <h3 className="text-xl font-bold text-primary">Scope</h3>
           <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Crossing rehab, rail and tie replacement, and fencing.</li>
-            <li>Track protection, EFB welding, undercutting, and inspections.</li>
-            <li>Work delivered during daily windows and planned 72-hour shutdowns.</li>
+            <li>Crossing rehabilitation (local paving contractor for all crossings).</li>
+            <li>Rail replacement.</li>
+            <li>Tie replacement.</li>
+            <li>Anti Trespass pads.</li>
+            <li>Fencing installation (local fencing contractor).</li>
+            <li>Track protection.</li>
+            <li>EFB welding.</li>
+            <li>Track undercutting.</li>
+            <li>Track inspections.</li>
+            <li>Equipment rental.</li>
           </ul>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Delivery</h3>
+          <p className="mt-2">
+            Work programs accomplished during daily down periods of operations or planned weekend 72-hour shutdown schedules.
+            Road closures arranged by Platinum Track with various jurisdictions across the Metrolinx network.
+          </p>
         </div>
         <div>
           <h3 className="text-xl font-bold text-primary">Outcome</h3>
           <p className="mt-2">
-            All programs completed on time and within budget with coordinated road closures.
+            All work programs completed on time and within budgeted values.
           </p>
         </div>
       </div>
     ),
   },
   {
-    title: "Glencore Canada – KIDD Tie Program",
+    title: "Glencore Canada Corporation - KIDD",
     date: "June 02, 2024",
     description:
       "Annual tie replacement program with surfacing equipment support for 2023–2025.",
-    image:
-      "https://images.unsplash.com/photo-1529429617124-aee969ab6f00?auto=format&fit=crop&w=900&q=80",
+    location: "Canada",
+    contact: "Jeff Romain, Supervisor",
+    value: "$1,200,000",
+    image: "/projects/Glencore Canada Corporation - KIDD/main.jpg",
+    images: ["/projects/Glencore Canada Corporation - KIDD/main.jpg"],
     slug: "glencore-kidd-tie-program",
     tags: ["Tie Gang", "Surfacing", "Mining"],
     statusLabel: "Project Status",
@@ -197,50 +222,43 @@ export const projectItems: ProjectCard[] = [
     feedLabel: "Site Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
+        <p>Annual railroad tie replacement program for 2023, 2024, and 2025.</p>
+        <p>All noted replacement ties were completed as requested, on budget and on time.</p>
+        <p>Supplied surfacing equipment during the tie replacement program.</p>
         <p>
-          Annual railroad tie replacement program at Glencore KIDD with surfacing equipment support.
+          Utilized local motels, restaurants, fuel supply outlets, and numerous retail outlets.
         </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Tie replacement across scheduled work blocks.</li>
-            <li>Surfacing equipment supplied during program.</li>
-            <li>Local vendor and accommodation spend to support the region.</li>
-          </ul>
-        </div>
       </div>
     ),
   },
   {
-    title: "CPKC Railway – Western Canada Surfacing",
+    title: "CPKC Railway Alberta & British Columbia",
     date: "February 14, 2024",
     description:
       "Mark IV surfacing set and regulator operators, plus CP operator training.",
+    contact: "Paul Purser, Director British Columbia",
     image:
       "https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=900&q=80",
     slug: "cpkc-western-canada-surfacing",
     tags: ["Surfacing", "Training", "Western Canada"],
+    value: "$900,000",
     statusLabel: "Project Status",
     statusValue: "Completed",
     metrics: [
-      { label: "Value", value: "$900K" },
       { label: "Years", value: "2024–2025" },
       { label: "Region", value: "AB/BC" },
+      { label: "Program", value: "Surfacing" },
     ],
     feedLabel: "Western Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          Western Canada program supplying Mark IV tamping and regulator operators with training for CP crews.
+          Supplied surfacing set with operators (Mark IV and regulator) and training for CP operators on Mark IV tampers.
         </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Surfacing set with operators (Mark IV and regulator).</li>
-            <li>Training for CP operators on Mark IV tampers.</li>
-            <li>Program managed by the Crossfield, Alberta team.</li>
-          </ul>
-        </div>
+        <p>
+          This work program was handled by our Western Canada group based in Crossfield, Alberta.
+        </p>
+        <p>Program included 2024 &amp; 2025.</p>
       </div>
     ),
   },
