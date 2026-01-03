@@ -132,12 +132,18 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 <MotionImage>
                   <div className="grid auto-rows-[160px] grid-flow-dense grid-cols-1 gap-4 sm:auto-rows-[180px] sm:grid-cols-2 lg:auto-rows-[200px]">
                     {gallerySources.map((src, index) => {
+                      const total = gallerySources.length;
                       const isLast = index === gallerySources.length - 1;
-                      const tileClass = gallerySources.length === 1
-                        ? "sm:col-span-2 sm:row-span-2"
-                        : isLast
+                      const tileClass =
+                        total === 1
                           ? "sm:col-span-2 sm:row-span-2"
-                          : tileClasses[index % tileClasses.length];
+                          : total <= 3
+                            ? isLast
+                              ? "sm:col-span-2 sm:row-span-2"
+                              : "sm:col-span-1 sm:row-span-1"
+                            : isLast
+                              ? "sm:col-span-2 sm:row-span-2"
+                              : tileClasses[index % tileClasses.length];
                       return (
                         <div
                           key={`${src}-${index}`}

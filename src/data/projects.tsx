@@ -100,12 +100,20 @@ export const projectItems: ProjectCard[] = [
     ),
   },
   {
-    title: "CN Rail MSA 2025 Program",
+    title: "CN Rail – MSA contract 2025",
     date: "October 04, 2025",
     description:
       "Multi-crew support program across Canada covering undercutting, surfacing, welding, crossings, and more.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    location: "Various locations throughout Canada",
+    contact: "Wade Clark, Sean Bacon, Stephane Veillette",
+    value: "+$20,000,000",
+    image: "/projects/CN Rail – MSA contract 2025/main.jpg",
+    images: [
+      "/projects/CN Rail – MSA contract 2025/main.jpg",
+      "/projects/CN Rail – MSA contract 2025/11.jpg",
+      "/projects/CN Rail – MSA contract 2025/12.jpg",
+      "/projects/CN Rail – MSA contract 2025/14.jpg",
+    ],
     slug: "cn-rail-msa-2025-program",
     tags: ["Support Crews", "Welding", "Surfacing"],
     statusLabel: "Project Status",
@@ -119,16 +127,13 @@ export const projectItems: ProjectCard[] = [
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          CN Rail MSA contract with multiple divisions/regions for 2025, delivering on-demand crews and equipment across the network.
+          Undercutting support crew, general utility support crew, tie gang, rail gang, scrap rail &amp; tie pickup,
+          switch installation, material distribution, joint elimination, utility gang, thermite welding gang,
+          surfacing consist, crossing installations, equipment rentals, snow clearing crews, and mentoring existing CN employees.
         </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Undercutting, tie/rail gangs, and joint elimination.</li>
-            <li>Thermite welding, surfacing consist, and crossing installs.</li>
-            <li>Material distribution, snow clearing, and mentorship for CN teams.</li>
-          </ul>
-        </div>
+        <p>
+          Numerous requests throughout the year from different divisions/regions. All requests completed for each region to the satisfaction of management.
+        </p>
       </div>
     ),
   },
