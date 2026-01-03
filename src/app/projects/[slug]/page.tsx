@@ -25,6 +25,13 @@ const getProject = (slug: string) => {
   });
 };
 
+const tileClasses = [
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-1 sm:row-span-1",
+  "sm:col-span-1 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-1",
+];
+
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
@@ -48,6 +55,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   if (!project) {
     notFound();
   }
+
+  const galleryImages =
+    project.images?.filter((src) => src !== project.image) ??
+    (project.image ? [project.image] : []);
+  const gallerySources = galleryImages.length ? galleryImages : [project.image];
 
   return (
     <>
@@ -101,7 +113,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                         { label: "Safety", value: "High" },
                         { label: "Coverage", value: "Nationwide" },
                       ]).map((item) => (
-                        <div key={item.label} className="rounded-xl border border-secondary/10 bg-white p-4 shadow-sm">
+                        <div key={item.label} className="rounded-xl bg-white p-4">
                           <p className="text-xs uppercase tracking-[0.2em] text-secondary/50">{item.label}</p>
                           <p className="mt-2 text-lg font-semibold text-secondary">{item.value}</p>
                         </div>
@@ -109,29 +121,45 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     </div>
                   </div>
                 </MotionItem>
-              </div>
-              <div className="space-y-6">
-                <MotionImage>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_20px_60px_rgba(18,19,21,0.2)]">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-                    <div className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
-                      {project.feedLabel ?? "Project Feed"}
-                    </div>
-                  </div>
-                </MotionImage>
                 <MotionItem>
                   <div className="rounded-2xl border border-secondary/10 bg-white/80 p-5">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary/60">Project Date</p>
                     <p className="mt-2 text-base font-semibold text-secondary">{project.date}</p>
                   </div>
                 </MotionItem>
+              </div>
+              <div className="space-y-6">
+                <MotionImage>
+                  <div className="grid auto-rows-[160px] grid-flow-dense grid-cols-1 gap-4 sm:auto-rows-[180px] sm:grid-cols-2 lg:auto-rows-[200px]">
+                    {gallerySources.map((src, index) => {
+                      const isLast = index === gallerySources.length - 1;
+                      const tileClass = gallerySources.length === 1
+                        ? "sm:col-span-2 sm:row-span-2"
+                        : isLast
+                          ? "sm:col-span-2 sm:row-span-2"
+                          : tileClasses[index % tileClasses.length];
+                      return (
+                        <div
+                          key={`${src}-${index}`}
+                          className={`relative overflow-hidden rounded-2xl ${tileClass}`}
+                        >
+                          <Image
+                            src={src}
+                            alt={project.title}
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                            className="object-cover"
+                          />
+                          {index === 0 ? (
+                            <div className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
+                              {project.feedLabel ?? "Project Feed"}
+                            </div>
+                          ) : null}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </MotionImage>
               </div>
             </MotionContainer>
           </div>

@@ -5,6 +5,7 @@ export type ProjectCard = {
   date: string;
   description: string;
   image: string;
+  images?: string[];
   slug: string;
   detailContent: ReactNode;
   location?: string;
@@ -26,7 +27,17 @@ export const projectItems: ProjectCard[] = [
     location: "North Bay, Ontario",
     contact: "Merick Letourneau",
     value: "+$16,000,000 (2025)",
-    image: "/projects/ONTC North Bay.jpg",
+    image: "/projects/ontc north bay/main.jpg",
+    images: [
+      "/projects/ontc north bay/main.jpg",
+      "/projects/ontc north bay/3.jpg",
+      "/projects/ontc north bay/4.jpg",
+      "/projects/ontc north bay/5.jpg",
+      "/projects/ontc north bay/6.jpg",
+      "/projects/ontc north bay/8.jpg",
+      "/projects/ontc north bay/9.jpg",
+      "/projects/ontc north bay/10.jpg",
+    ],
     slug: "ontc-north-bay-rail-tie-program",
     tags: ["Rail", "Tie", "Turnouts"],
     statusLabel: "Project Status",
@@ -48,6 +59,35 @@ export const projectItems: ProjectCard[] = [
             <li>Track tie and switch tie replacement.</li>
             <li>Rail upgrades, surfacing, and new turnouts.</li>
             <li>Scrap tie cleanup and disposal (~1,000,000 ties over 3 years).</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Program Notes</h3>
+          <p className="mt-2">
+            Platinum Track Services Inc is the only railroad contractor to complete 100% of the scheduled work program for this annual program, while also performing additional work required by ONTC.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Local Engagement</h3>
+          <ul className="mt-2 list-disc pl-5 space-y-2">
+            <li>Local fuel &amp; lubricant suppliers</li>
+            <li>Motels</li>
+            <li>Mobile field mechanic services</li>
+            <li>Repair shops</li>
+            <li>Parts suppliers</li>
+            <li>Local trucking companies</li>
+            <li>Local disposal companies</li>
+            <li>Restaurants</li>
+            <li>Grocery stores</li>
+            <li>ONR Train service to Moosonee</li>
+            <li>ONR bus service</li>
+            <li>Local excavation and grading contractors</li>
+            <li>Machine shops</li>
+            <li>Communication services</li>
+            <li>Safety supply outlets</li>
+            <li>Local butchers and farmers</li>
+            <li>Local taxi services</li>
+            <li>Donated to local food bank services</li>
           </ul>
         </div>
         <div>
