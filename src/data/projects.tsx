@@ -236,9 +236,10 @@ export const projectItems: ProjectCard[] = [
     date: "February 14, 2024",
     description:
       "Mark IV surfacing set and regulator operators, plus CP operator training.",
+    location: "Alberta & British Columbia",
     contact: "Paul Purser, Director British Columbia",
-    image:
-      "https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=900&q=80",
+    image: "/projects/CPKC Railway Alberta & British Columbia/main.jpg",
+    images: ["/projects/CPKC Railway Alberta & British Columbia/main.jpg"],
     slug: "cpkc-western-canada-surfacing",
     tags: ["Surfacing", "Training", "Western Canada"],
     value: "$900,000",
@@ -263,12 +264,18 @@ export const projectItems: ProjectCard[] = [
     ),
   },
   {
-    title: "CN Rail BC Turnout Upgrades",
+    title: "CN Rail British Columbia",
     date: "December 08, 2023",
     description:
       "Upgrade of two mainline turnouts with local contractor support in BC.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    contact: "Ole Quam, Senior Manager",
+    value: "$184,356",
+    location: "Chetwyn & Fort Saint John, British Columbia",
+    image: "/projects/CN Rail British Columbia/main.jpg",
+    images: [
+      "/projects/CN Rail British Columbia/main.jpg",
+      "/projects/CN Rail British Columbia/22.jpg",
+    ],
     slug: "cn-rail-bc-turnout-upgrades",
     tags: ["Turnouts", "Mainline", "BC"],
     statusLabel: "Project Status",
@@ -281,17 +288,16 @@ export const projectItems: ProjectCard[] = [
     feedLabel: "BC Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
+        <p>Upgraded two mainline turnouts for CN Rail.</p>
+        <p>Removed existing turnouts and installed new #12 136RE turnouts.</p>
+        <p>One located in Chetwyn and the second in Fort Saint John.</p>
         <p>
-          Upgraded two mainline #12 136RE turnouts for CN Rail in Chetwynd and Fort St. John, BC.
+          Hired a local construction company to assist with grading, moving turnouts, and spreading ballast.
         </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Removal of existing turnouts and installation of new #12 136RE units.</li>
-            <li>Local contractor support for grading, turnout moves, and ballast placement.</li>
-            <li>Completed on time and within budgeted value.</li>
-          </ul>
-        </div>
+        <p>
+          Utilized local workforce when available and utilized local motels and restaurants with our out-of-town personnel.
+        </p>
+        <p>Work completed on time and within budgeted value.</p>
       </div>
     ),
   },

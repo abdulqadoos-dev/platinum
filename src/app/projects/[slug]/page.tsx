@@ -133,17 +133,19 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       const isLast = index === gallerySources.length - 1;
                       const tileClass = total === 1
                         ? "sm:col-span-2 sm:row-span-2"
-                        : total >= 3
-                          ? index === 0
-                            ? "sm:col-span-1 sm:row-span-2"
-                            : index === 1 || index === 2
-                              ? "sm:col-span-1 sm:row-span-1"
-                              : isLast
-                                ? "sm:col-span-2 sm:row-span-2"
-                                : "sm:col-span-1 sm:row-span-1"
-                          : isLast
-                            ? "sm:col-span-2 sm:row-span-2"
-                            : "sm:col-span-1 sm:row-span-1";
+                        : total === 2
+                          ? "sm:col-span-1 sm:row-span-2"
+                          : total >= 3
+                            ? index === 0
+                              ? "sm:col-span-1 sm:row-span-2"
+                              : index === 1 || index === 2
+                                ? "sm:col-span-1 sm:row-span-1"
+                                : isLast
+                                  ? "sm:col-span-2 sm:row-span-2"
+                                  : "sm:col-span-1 sm:row-span-1"
+                            : isLast
+                              ? "sm:col-span-2 sm:row-span-2"
+                              : "sm:col-span-1 sm:row-span-1";
                       return (
                         <div
                           key={`${src}-${index}`}
