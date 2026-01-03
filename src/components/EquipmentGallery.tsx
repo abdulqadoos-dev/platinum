@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
 
 import EquipmentModal from "@/components/EquipmentModal";
 import { equipmentCards } from "@/data/equipments";
@@ -70,14 +71,18 @@ export default function EquipmentGallery() {
   return (
     <>
       <div className="grid auto-rows-[160px] grid-flow-dense gap-8 sm:auto-rows-[180px] sm:grid-cols-2 lg:auto-rows-[200px] lg:grid-cols-3 xl:grid-cols-4">
-        {equipmentCards.map((equipment) => (
-          <button
+        {equipmentCards.map((equipment, index) => (
+          <motion.button
             key={equipment.slug}
             type="button"
             onClick={() => setActiveSlug(equipment.slug)}
             className={`relative col-span-1 row-span-1 min-h-[160px] overflow-hidden rounded-2xl text-left group ${getCardClass(
               equipment.slug
             )}`}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.03 }}
           >
             <Image
               src={equipment.image}
@@ -90,7 +95,7 @@ export default function EquipmentGallery() {
             <div className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
               {equipment.title}
             </div>
-          </button>
+          </motion.button>
         ))}
       </div>
 

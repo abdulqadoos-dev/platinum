@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const people = [
   {
@@ -202,7 +203,13 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* HEADING SECTION */}
-        <div className="flex flex-col gap-3 items-start">
+        <motion.div
+          className="flex flex-col gap-3 items-start"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <span className="text-[11px] sm:text-xs uppercase tracking-[0.45em] font-semibold text-secondary/70">
             About us
           </span>
@@ -213,13 +220,19 @@ export default function About() {
             Spanning Three Generations
           </h2>
           <span className="h-[1px] w-40 bg-gradient-to-r from-secondary/80 via-secondary/30 to-transparent" />
-        </div>
+        </motion.div>
 
         {/* LEFT ITEMS + PARAGRAPH */}
         <div className="grid grid-cols-1 lg:grid-cols-8 items-center gap-8 md:gap-10 mt-10 mb-12 md:mb-16">
 
           {/* LEFT LOGO */}
-          <div className="col-span-8 md:col-span-2 self-stretch">
+          <motion.div
+            className="col-span-8 md:col-span-2 self-stretch"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          >
             <div className="flex h-full items-start justify-start">
               <div className="flex h-full w-full items-center justify-center rounded-2xl border border-secondary/15 bg-white/70 px-8 py-6 shadow-[0_18px_40px_rgba(22,19,74,0.12)] backdrop-blur">
                 <Image
@@ -232,10 +245,16 @@ export default function About() {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT PARAGRAPH */}
-          <div className="col-span-6 space-y-10">
+          <motion.div
+            className="col-span-6 space-y-10"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+          >
             <p className="text-secondary text-sm md:text-base font-semibold leading-relaxed md:leading-6 w-full">
               Platinum Track Services Is A Name That Was Carefully Chosen. Platinum Creates An Image Of
               "The Best" And We Believe That We Are The Very Best. Not Only Are We The Best Today, But We
@@ -253,7 +272,7 @@ export default function About() {
               Our Journey To Become One Of The Largest Rail Contractors.
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

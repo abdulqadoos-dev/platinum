@@ -68,15 +68,17 @@ export default function Projects() {
       className="bg-gray-100 text-secondary py-16 sm:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:gap-3 lg:flex-row items-start lg:items-center mb-12 lg:mb-16">
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none text-nowrap">
+        <div className="flex flex-col gap-3 items-start mb-12 lg:mb-16">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.45em] font-semibold text-secondary/70">
             Projects
+          </span>
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-primary leading-none">
+            Major Rail Contracts Across Canada
           </h1>
-          <div className="bg-secondary text-white px-2 md:px-3 lg:px-6 py-2 md:py-1 w-full font-bold text-xs md:text-xs lg:text-lg leading-tight">
-            40 Years Of Experience And
-            <br className="hidden sm:block" />
-            Spanning Three Generations
-          </div>
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold text-secondary/70">
+            Multi-Year Programs, Proven Delivery
+          </h2>
+          <span className="h-[1px] w-40 bg-gradient-to-r from-secondary/80 via-secondary/30 to-transparent" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">

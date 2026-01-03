@@ -16,342 +16,210 @@ export type ProjectCard = {
 
 export const projectItems: ProjectCard[] = [
   {
-    title: "Mainline Rehab - CP Rail",
-    date: "September 12, 2024",
+    title: "ONTC North Bay Rail & Tie Program",
+    date: "November 12, 2025",
     description:
-      "Ballast renewal and surfacing across 25 km to restore ride quality, drainage, and uptime for unit trains.",
+      "Rail and tie installation/surfacing program delivering full scope completion across the ONTC network.",
     image:
       "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
-    slug: "mainline-rehab-cp-rail",
-    tags: ["Mainline", "Rehab", "Ballast"],
+    slug: "ontc-north-bay-rail-tie-program",
+    tags: ["Rail", "Tie", "Turnouts"],
     statusLabel: "Project Status",
     statusValue: "Completed",
     metrics: [
-      { label: "Distance", value: "25 km" },
-      { label: "Drainage", value: "Restored" },
-      { label: "Uptime", value: "Improved" },
+      { label: "Rail", value: "72.56 miles" },
+      { label: "Ties", value: "185,329" },
+      { label: "Turnouts", value: "17 installed" },
+    ],
+    feedLabel: "Program Feed",
+    detailContent: (
+      <div className="space-y-5 text-base text-secondary">
+        <p>
+          Rail and tie installation/surfacing program (RFP 2023 002) across the ONTC network, including turnouts and large-scale disposal of heritage ties.
+        </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Scope</h3>
+          <ul className="mt-2 list-disc pl-5 space-y-2">
+            <li>Track tie and switch tie replacement.</li>
+            <li>Rail upgrades, surfacing, and new turnouts.</li>
+            <li>Scrap tie cleanup and disposal (~1,000,000 ties over 3 years).</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Outcome</h3>
+          <p className="mt-2">
+            100% of scheduled work completed with additional tasks delivered across the three-year program.
+          </p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "CN Rail MSA 2025 Program",
+    date: "October 04, 2025",
+    description:
+      "Multi-crew support program across Canada covering undercutting, surfacing, welding, crossings, and more.",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    slug: "cn-rail-msa-2025-program",
+    tags: ["Support Crews", "Welding", "Surfacing"],
+    statusLabel: "Project Status",
+    statusValue: "Completed",
+    metrics: [
+      { label: "Value", value: "$20M+" },
+      { label: "Coverage", value: "Canada-wide" },
+      { label: "Crews", value: "Multi-discipline" },
+    ],
+    feedLabel: "Operations Feed",
+    detailContent: (
+      <div className="space-y-5 text-base text-secondary">
+        <p>
+          CN Rail MSA contract with multiple divisions/regions for 2025, delivering on-demand crews and equipment across the network.
+        </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Scope</h3>
+          <ul className="mt-2 list-disc pl-5 space-y-2">
+            <li>Undercutting, tie/rail gangs, and joint elimination.</li>
+            <li>Thermite welding, surfacing consist, and crossing installs.</li>
+            <li>Material distribution, snow clearing, and mentorship for CN teams.</li>
+          </ul>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Metrolinx ROW Maintenance & Rail Program",
+    date: "September 18, 2024",
+    description:
+      "GTA-wide state-of-good-repair and rail programs with coordinated shutdown windows.",
+    image:
+      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=900&q=80",
+    slug: "metrolinx-row-maintenance-rail-program",
+    tags: ["ROW", "Crossings", "Inspections"],
+    statusLabel: "Project Status",
+    statusValue: "Completed",
+    metrics: [
+      { label: "Value", value: "$9M" },
+      { label: "Years", value: "2023–2025" },
+      { label: "Region", value: "GTA" },
+    ],
+    feedLabel: "System Feed",
+    detailContent: (
+      <div className="space-y-5 text-base text-secondary">
+        <p>
+          Metrolinx contracts for ROW maintenance, state-of-good-repair, and rail programs across 2023–2025.
+        </p>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Scope</h3>
+          <ul className="mt-2 list-disc pl-5 space-y-2">
+            <li>Crossing rehab, rail and tie replacement, and fencing.</li>
+            <li>Track protection, EFB welding, undercutting, and inspections.</li>
+            <li>Work delivered during daily windows and planned 72-hour shutdowns.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-primary">Outcome</h3>
+          <p className="mt-2">
+            All programs completed on time and within budget with coordinated road closures.
+          </p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Glencore Canada – KIDD Tie Program",
+    date: "June 02, 2024",
+    description:
+      "Annual tie replacement program with surfacing equipment support for 2023–2025.",
+    image:
+      "https://images.unsplash.com/photo-1529429617124-aee969ab6f00?auto=format&fit=crop&w=900&q=80",
+    slug: "glencore-kidd-tie-program",
+    tags: ["Tie Gang", "Surfacing", "Mining"],
+    statusLabel: "Project Status",
+    statusValue: "Completed",
+    metrics: [
+      { label: "Value", value: "$1.2M" },
+      { label: "Years", value: "2023–2025" },
+      { label: "Program", value: "Annual" },
     ],
     feedLabel: "Site Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          Ballast renewal and track surfacing across a 25 km mainline segment to restore ride quality, drainage performance, and operational uptime for unit trains.
+          Annual railroad tie replacement program at Glencore KIDD with surfacing equipment support.
         </p>
         <div>
           <h3 className="text-xl font-bold text-primary">Scope</h3>
           <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Ballast excavation, replacement, and profiling.</li>
-            <li>Track surfacing and alignment corrections.</li>
-            <li>Drainage improvements and shoulder shaping.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Outcome</h3>
-          <p className="mt-2">
-            Improved ride quality and drainage, reduced maintenance cycles, and restored reliable unit train operations.
-          </p>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Yard Expansion Phase 2",
-    date: "August 04, 2024",
-    description:
-      "New turnouts, ladder tracks, and signal upgrades to increase yard capacity and reduce dwell time.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-    slug: "yard-expansion-phase-2",
-    tags: ["Yard", "Turnouts", "Signals"],
-    statusLabel: "Project Status",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Capacity", value: "Expanded" },
-      { label: "Signals", value: "Upgraded" },
-      { label: "Dwell", value: "Reduced" },
-    ],
-    feedLabel: "Yard Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          New turnouts, ladder tracks, and signal upgrades to increase yard capacity and reduce dwell time during peak operations.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Turnout installation and ladder track extensions.</li>
-            <li>Signal system upgrades and testing.</li>
-            <li>Track geometry alignment and surfacing.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Outcome</h3>
-          <p className="mt-2">
-            Increased yard throughput, improved operational flexibility, and reduced train dwell times.
-          </p>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Bridge Approaches Stabilization",
-    date: "July 18, 2024",
-    description:
-      "Track realignment and approach stabilization on a critical river crossing to improve safety and reliability.",
-    image:
-      "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=900&q=80",
-    slug: "bridge-approaches-stabilization",
-    tags: ["Bridge", "Stabilization", "Alignment"],
-    statusLabel: "Project Status",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Safety", value: "Improved" },
-      { label: "Alignment", value: "Corrected" },
-      { label: "Stability", value: "Reinforced" },
-    ],
-    feedLabel: "Bridge Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          Track realignment and approach stabilization on a critical river crossing to improve safety and long-term reliability.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Approach grading and stabilization.</li>
-            <li>Track alignment corrections and surfacing.</li>
-            <li>Drainage improvements near bridge abutments.</li>
+            <li>Tie replacement across scheduled work blocks.</li>
+            <li>Surfacing equipment supplied during program.</li>
+            <li>Local vendor and accommodation spend to support the region.</li>
           </ul>
         </div>
       </div>
     ),
   },
   {
-    title: "Industrial Spur Construction",
-    date: "June 22, 2024",
-    description:
-      "Design-build of a new industrial spur with grading, drainage, and surfacing to connect a client site to the mainline.",
-    image:
-      "https://images.unsplash.com/photo-1529429617124-aee969ab6f00?auto=format&fit=crop&w=900&q=80",
-    slug: "industrial-spur-construction",
-    tags: ["Design-Build", "Spur", "Grading"],
-    statusLabel: "Project Status",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Design", value: "Delivered" },
-      { label: "Grading", value: "Complete" },
-      { label: "Connection", value: "Mainline" },
-    ],
-    feedLabel: "Build Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          Design-build of a new industrial spur with grading, drainage, and surfacing to connect a client facility to the mainline.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Site grading, drainage, and base preparation.</li>
-            <li>Track installation and surfacing.</li>
-            <li>Turnout integration and commissioning.</li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Turnout Rehabilitation Program",
-    date: "May 10, 2024",
-    description:
-      "Rehab and re-timbering of high-traffic turnouts to improve reliability and switching performance.",
-    image:
-      "https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=900&q=80",
-    slug: "turnout-rehabilitation-program",
-    tags: ["Turnouts", "Re-timber", "Switching"],
-    statusLabel: "Project Status",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Reliability", value: "Upgraded" },
-      { label: "Switching", value: "Improved" },
-      { label: "Service", value: "Minimized" },
-    ],
-    feedLabel: "Turnout Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          Rehab and re-timbering of high-traffic turnouts to improve reliability and switching performance.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Component replacement and re-timbering.</li>
-            <li>Switch alignment and geometry checks.</li>
-            <li>Operational testing and commissioning.</li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Crossing Rehabilitation - Hwy 6",
-    date: "April 03, 2024",
-    description:
-      "Removal and replacement of panels with new underlayment and ballast for a smoother roadway interface.",
-    image:
-      "https://images.unsplash.com/photo-1494548162494-384bba4ab999?auto=format&fit=crop&w=900&q=80",
-    slug: "crossing-rehabilitation-hwy-6",
-    tags: ["Crossing", "Panels", "Roadway"],
-    statusLabel: "Project Status",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Surface", value: "Smoothed" },
-      { label: "Panels", value: "Replaced" },
-      { label: "Impact", value: "Minimized" },
-    ],
-    feedLabel: "Crossing Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          Removal and replacement of crossing panels with new underlayment and ballast for a smoother roadway interface.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Panel removal and subgrade prep.</li>
-            <li>New underlayment and ballast placement.</li>
-            <li>Surface restoration and alignment.</li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Emergency Response Drill",
-    date: "March 21, 2024",
-    description:
-      "Full-scale response simulation with rerailing, site clearance, and remediation coordination.",
-    image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
-    slug: "emergency-response-drill",
-    tags: ["Emergency", "Rerailing", "Remediation"],
-    statusLabel: "Exercise Status",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Response", value: "Validated" },
-      { label: "Clearance", value: "Tested" },
-      { label: "Safety", value: "Verified" },
-    ],
-    feedLabel: "Response Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          Full-scale response simulation with rerailing, site clearance, and remediation coordination to validate readiness.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Rerailing drills with heavy equipment.</li>
-            <li>Site clearance and hazard control.</li>
-            <li>Environmental response coordination.</li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Material Distribution Upgrade",
+    title: "CPKC Railway – Western Canada Surfacing",
     date: "February 14, 2024",
     description:
-      "Optimized rail and tie delivery workflow with improved staging and pickup scheduling.",
+      "Mark IV surfacing set and regulator operators, plus CP operator training.",
     image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
-    slug: "material-distribution-upgrade",
-    tags: ["Logistics", "Delivery", "Pickup"],
-    statusLabel: "Program Status",
+      "https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=900&q=80",
+    slug: "cpkc-western-canada-surfacing",
+    tags: ["Surfacing", "Training", "Western Canada"],
+    statusLabel: "Project Status",
     statusValue: "Completed",
     metrics: [
-      { label: "Delivery", value: "Optimized" },
-      { label: "Pickup", value: "Scheduled" },
-      { label: "Staging", value: "Improved" },
+      { label: "Value", value: "$900K" },
+      { label: "Years", value: "2024–2025" },
+      { label: "Region", value: "AB/BC" },
     ],
-    feedLabel: "Logistics Feed",
+    feedLabel: "Western Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          Optimized rail and tie delivery workflow with improved staging and pickup scheduling to minimize downtime.
+          Western Canada program supplying Mark IV tamping and regulator operators with training for CP crews.
         </p>
         <div>
           <h3 className="text-xl font-bold text-primary">Scope</h3>
           <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Delivery route planning and staging.</li>
-            <li>Pickup scheduling for scrap and OTM.</li>
-            <li>Operational workflow improvements.</li>
+            <li>Surfacing set with operators (Mark IV and regulator).</li>
+            <li>Training for CP operators on Mark IV tampers.</li>
+            <li>Program managed by the Crossfield, Alberta team.</li>
           </ul>
         </div>
       </div>
     ),
   },
   {
-    title: "Track Inspection Corridor 12",
-    date: "January 28, 2024",
-    description:
-      "TIG-qualified visual inspection with detailed reporting and maintenance recommendations.",
-    image:
-      "https://images.unsplash.com/photo-1494548162494-384bba4ab999?auto=format&fit=crop&w=900&q=80",
-    slug: "track-inspection-corridor-12",
-    tags: ["Inspection", "TIG Qualified", "Reporting"],
-    statusLabel: "Inspection",
-    statusValue: "Completed",
-    metrics: [
-      { label: "Findings", value: "Logged" },
-      { label: "Reports", value: "Delivered" },
-      { label: "Plan", value: "Issued" },
-    ],
-    feedLabel: "Inspection Feed",
-    detailContent: (
-      <div className="space-y-5 text-base text-secondary">
-        <p>
-          TIG-qualified visual inspection with detailed reporting and maintenance recommendations for Corridor 12.
-        </p>
-        <div>
-          <h3 className="text-xl font-bold text-primary">Scope</h3>
-          <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Visual inspection and geometry checks.</li>
-            <li>Written reports with cost estimates.</li>
-            <li>Maintenance plan recommendations.</li>
-          </ul>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "Track Removal - Industrial Loop",
+    title: "CN Rail BC Turnout Upgrades",
     date: "December 08, 2023",
     description:
-      "Removal of abandoned track with salvage recovery and roadway restoration.",
+      "Upgrade of two mainline turnouts with local contractor support in BC.",
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-    slug: "track-removal-industrial-loop",
-    tags: ["Removal", "Salvage", "Restoration"],
-    statusLabel: "Removal",
+    slug: "cn-rail-bc-turnout-upgrades",
+    tags: ["Turnouts", "Mainline", "BC"],
+    statusLabel: "Project Status",
     statusValue: "Completed",
     metrics: [
-      { label: "Salvage", value: "Recovered" },
-      { label: "Disposal", value: "Managed" },
-      { label: "Roadway", value: "Restored" },
+      { label: "Value", value: "$184K" },
+      { label: "Turnouts", value: "2 upgraded" },
+      { label: "Locations", value: "Chetwynd & Fort St. John" },
     ],
-    feedLabel: "Removal Feed",
+    feedLabel: "BC Feed",
     detailContent: (
       <div className="space-y-5 text-base text-secondary">
         <p>
-          Removal of abandoned track with salvage recovery and roadway restoration to return the site to usable condition.
+          Upgraded two mainline #12 136RE turnouts for CN Rail in Chetwynd and Fort St. John, BC.
         </p>
         <div>
           <h3 className="text-xl font-bold text-primary">Scope</h3>
           <ul className="mt-2 list-disc pl-5 space-y-2">
-            <li>Track removal and salvage sorting.</li>
-            <li>Disposal of unusable materials.</li>
-            <li>Crossing removal and road restoration.</li>
+            <li>Removal of existing turnouts and installation of new #12 136RE units.</li>
+            <li>Local contractor support for grading, turnout moves, and ballast placement.</li>
+            <li>Completed on time and within budgeted value.</li>
           </ul>
         </div>
       </div>

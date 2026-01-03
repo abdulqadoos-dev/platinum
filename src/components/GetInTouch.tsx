@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function GetInTouch() {
   const [formData, setFormData] = useState({
@@ -114,7 +115,13 @@ export default function GetInTouch() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT CONTACT DETAILS */}
-          <div className="order-2 lg:order-1 space-y-10 mt-10 lg:mt-24">
+          <motion.div
+            className="order-2 lg:order-1 space-y-10 mt-10 lg:mt-24"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             {contactDetails.map((detail, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="mt-1 flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-white shadow-[0_10px_22px_rgba(22,19,74,0.35)]">
@@ -130,10 +137,16 @@ export default function GetInTouch() {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* RIGHT FORM + HEADINGS */}
-          <div className="order-1 lg:order-2 relative">
+          <motion.div
+            className="order-1 lg:order-2 relative"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          >
             {/* HEADER */}
             <div className="mb-10 text-right">
               <div className="inline-flex flex-col items-end gap-2">
@@ -153,7 +166,14 @@ export default function GetInTouch() {
             </div>
 
             {/* FORM */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="text-xs uppercase tracking-[0.3em] font-semibold text-secondary/70 px-3">
@@ -275,8 +295,8 @@ export default function GetInTouch() {
                   </button>
                 </div>
               </div>
-            </form>
-          </div>
+            </motion.form>
+          </motion.div>
         </div>
       </div>
     </section>
