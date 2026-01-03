@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import EquipmentGallery from "@/components/EquipmentGallery";
 import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
 
 export default function EquipmentPage() {
   return (
@@ -30,7 +31,9 @@ export default function EquipmentPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <EquipmentGallery />
+        <Suspense fallback={null}>
+          <EquipmentGallery />
+        </Suspense>
       </section>
       <Footer />
     </div>

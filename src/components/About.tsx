@@ -8,7 +8,7 @@ const people = [
   {
     name: "Mike Sousa",
     role: "Chief Executive Officer, Platinum Track Services Inc.",
-    image: "/peoples/Mike%20Sousa,%20Founder,%20Chief%20Executive%20Officer.jpg",
+    image: "/peoples/Mike%20Sousa%2C%20Founder%2C%20Chief%20Executive%20Officer.jpg",
     bio:
       "Mike Sousa is the founder and CEO of Platinum Track Services Inc., with 30+ years in railroad construction, maintenance, and operations. He leads company strategy, safety, and delivery across North America while building high-performance teams and trusted client partnerships.",
     linkedin: "https://ca.linkedin.com/in/mike-sousa-1b1106b0",
@@ -17,7 +17,7 @@ const people = [
   {
     name: "Minha Saeed",
     role: "Chief Financial Officer, Platinum Track Services Inc.",
-    image: "/peoples/M%20Saeed,%20Chief%20Financial%20Officer.jpeg",
+    image: "/peoples/M%20Saeed%2C%20Chief%20Financial%20Officer.jpeg",
     bio:
       "Minha Saeed, CPA, CA, is CFO at Platinum Track Services Inc., leading financial strategy, controls, and compliance. She oversees budgeting, forecasting, and ERP integrations to support disciplined growth and operational alignment.",
     linkedin: "https://ca.linkedin.com/in/minha-saeed-cpa-ca-32682019",
@@ -26,7 +26,7 @@ const people = [
   {
     name: "Rick Haggart",
     role: "Director of Track & Business Development",
-    image: "/peoples/Rick%20Haggart%20-%20Director%20of%20Track%20Strategy%20&%20Advisory.png",
+    image: "/peoples/Rick%20Haggart%20-%20Director%20of%20Track%20Strategy%20%26%20Advisory.png",
     bio:
       "Rick S. Haggart is Director of Track & Business Development with 44+ years in rail and transit infrastructure. He previously led CN Rail engineering in Eastern Canada and now drives engineering oversight, safety, and growth for major programs.",
     linkedin: "https://www.linkedin.com/",
