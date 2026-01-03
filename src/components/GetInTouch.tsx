@@ -276,9 +276,9 @@ export default function GetInTouch() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group flex items-center space-x-2 bg-transparent border border-secondary shadow px-6 py-2 rounded-full text-secondary hover:bg-secondary hover:text-white transition disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="group flex items-center space-x-2 rounded-full bg-secondary px-6 py-2 text-white shadow-[0_14px_28px_rgba(22,19,74,0.2)] transition hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <span className="font-semibold text-secondary transition-colors group-hover:text-white">
+                    <span className="font-semibold text-white">
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </span>
                     <svg
