@@ -7,6 +7,9 @@ export type ProjectCard = {
   image: string;
   slug: string;
   detailContent: ReactNode;
+  location?: string;
+  contact?: string;
+  value?: string;
   tags?: string[];
   statusLabel?: string;
   statusValue?: string;
@@ -16,12 +19,14 @@ export type ProjectCard = {
 
 export const projectItems: ProjectCard[] = [
   {
-    title: "ONTC North Bay Rail & Tie Program",
+    title: "ONTC North Bay, Ontario",
     date: "November 12, 2025",
     description:
       "Rail and tie installation/surfacing program delivering full scope completion across the ONTC network.",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80",
+    location: "North Bay, Ontario",
+    contact: "Merick Letourneau",
+    value: "+$16,000,000 (2025)",
+    image: "/projects/ONTC North Bay.jpg",
     slug: "ontc-north-bay-rail-tie-program",
     tags: ["Rail", "Tie", "Turnouts"],
     statusLabel: "Project Status",

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { projectItems } from "@/data/projects";
 
@@ -29,8 +30,14 @@ export default function Projects() {
     const parts = date.split(",");
     return (parts[parts.length - 1] || date).trim();
   };
+  const formatMonthYear = (date: string) => {
+    const parts = date.split(",");
+    if (parts.length < 2) return date;
+    const month = parts[0].trim().split(" ")[0] || parts[0].trim();
+    const year = parts[parts.length - 1].trim();
+    return `${month} ${year}`.trim();
+  };
   const [activeDate, setActiveDate] = useState<string | null>(null);
-  const [showAllMobile, setShowAllMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -47,15 +54,13 @@ export default function Projects() {
   }, [activeDate]);
 
   const visibleProjects = useMemo(() => {
-    if (isMobile && !showAllMobile) return filteredProjects.slice(0, 3);
     return filteredProjects;
-  }, [filteredProjects, isMobile, showAllMobile]);
+  }, [filteredProjects]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 1023px)");
     const handleChange = () => {
       setIsMobile(mediaQuery.matches);
-      if (!mediaQuery.matches) setShowAllMobile(false);
     };
     handleChange();
     mediaQuery.addEventListener("change", handleChange);
@@ -104,7 +109,7 @@ export default function Projects() {
                 setActiveDate(null);
                 scrollToSection();
               }}
-              className={`w-full text-left text-sm font-semibold uppercase tracking-[0.2em] ${
+              className={`w-full text-left text-base font-semibold uppercase tracking-[0.2em] ${
                 activeDate === null ? "text-primary" : "text-secondary/70"
               }`}
             >
@@ -123,8 +128,8 @@ export default function Projects() {
                     activeDate === date ? "text-primary" : "text-secondary/70"
                   }`}
                 >
-                  <span className="text-base font-semibold uppercase tracking-[0.2em]">
-                    {formatYear(date)}
+                  <span className="text-sm font-semibold uppercase tracking-[0.2em]">
+                    {formatMonthYear(date)}
                   </span>
                 </button>
               ))}
@@ -135,60 +140,119 @@ export default function Projects() {
             <div>
               <div ref={sliderRef} className="flex gap-5 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory">
                 {visibleProjects.map((project) => (
-                  <div
+                  <motion.div
                     key={project.title + project.image}
-                    className="min-w-full snap-start bg-white rounded-2xl cursor-pointer flex flex-col lg:flex-row overflow-hidden"
-                    role="link"
-                    tabIndex={0}
-                    onClick={() => router.push(`/projects/${project.slug}`)}
-                    onKeyDown={(event) => {
-                      if (event.key === "Enter" || event.key === " ") {
-                        event.preventDefault();
-                        router.push(`/projects/${project.slug}`);
-                      }
-                    }}
+                    className="min-w-full snap-start flex flex-col lg:flex-row"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                   >
-                    <div className="order-2 lg:order-1 flex w-full lg:w-1/2 flex-col p-6">
-                      <p className="text-lg font-bold uppercase tracking-[0.25em] text-secondary/70 mb-2">
-                        {formatYear(project.date)}
-                      </p>
-                      <h3 className="text-primary text-2xl font-bold mb-3 line-clamp-2">
+                    <div className="order-2 lg:order-1 flex w-full lg:w-[55%] flex-col pt-4 lg:pt-0 lg:pr-10 min-h-[340px]">
+                      <p className="text-xl sm:text-2xl lg:text-4xl font-bold text-secondary tracking-normal">
                         {project.title}
-                      </h3>
-                      <p className="text-secondary text-sm leading-relaxed line-clamp-4">
-                        {project.description}
                       </p>
+                      <div className="flex flex-col items-start">
+                        <h3 className="mt-2 text-5xl sm:text-7xl lg:text-[6.5rem] font-black text-primary leading-none">
+                          {formatYear(project.date)}
+                        </h3>
+                      </div>
+                      <div className="mt-10 space-y-3 text-xs font-semibold uppercase tracking-[0.2em] text-secondary/70">
+                        {project.location ? (
+                          <p className="flex items-center gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="text-secondary/60"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                              <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
+                            </svg>
+                            {project.location}
+                          </p>
+                        ) : null}
+                        {project.contact ? (
+                          <p className="flex items-center gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="text-secondary/60"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                              <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" />
+                              <path d="M9 17h6" />
+                              <path d="M9 13h6" />
+                            </svg>
+                            {project.contact}
+                          </p>
+                        ) : null}
+                        {project.value ? (
+                          <p className="flex items-center gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="text-secondary/60"
+                            >
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                              <path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" />
+                              <path d="M12 3v3m0 12v3" />
+                            </svg>
+                            {project.value}
+                          </p>
+                        ) : null}
+                      </div>
                       <Link
                         href={`/projects/${project.slug}`}
-                        className="ml-auto mt-auto inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-white/70 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-secondary shadow-[0_10px_24px_rgba(22,19,74,0.1)] backdrop-blur transition hover:border-secondary hover:text-primary mt-6"
-                        onClick={(event) => event.stopPropagation()}
+                        className="mt-auto inline-flex self-start items-center gap-2 rounded-full border border-secondary/30 bg-white/70 px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-secondary backdrop-blur transition hover:border-secondary hover:text-primary"
                       >
-                        <span>Read More</span>
+                        Read More
                         <ArrowIcon />
                       </Link>
                     </div>
-                    <div className="order-1 lg:order-2 relative w-full lg:w-1/2 min-h-[280px] sm:min-h-[360px] lg:min-h-full">
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} image`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 50vw"
-                        className="object-cover"
-                      />
-                      <div className="absolute left-3 top-3 rounded-full border border-white/60 bg-white/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-secondary/70">
-                        {project.statusValue ?? "Completed"}
+                    <div className="order-1 lg:order-2 w-full lg:w-[45%]">
+                      <div className="relative min-h-[360px] sm:min-h-[460px] lg:min-h-[520px] overflow-hidden rounded-2xl">
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} image`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 58vw, 58vw"
+                          className="object-cover"
+                        />
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
             {visibleProjects.length > 1 ? (
-              <div className="mt-6 flex items-center justify-end gap-3">
+              <div className="mt-4 flex items-center justify-end gap-3">
                 <button
                   type="button"
                   onClick={() => scrollSlider("prev")}
-                  className="group h-12 w-12 cursor-pointer rounded-full border border-secondary/30 bg-white text-secondary shadow-[0_10px_25px_rgba(0,0,0,0.15)] backdrop-blur transition hover:scale-105 hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]"
+                  className="group h-11 w-11 cursor-pointer rounded-full border border-secondary/30 bg-white text-secondary backdrop-blur transition hover:scale-105"
                 >
                   <span className="sr-only">Previous</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="mx-auto">
@@ -198,23 +262,12 @@ export default function Projects() {
                 <button
                   type="button"
                   onClick={() => scrollSlider("next")}
-                  className="group h-12 w-12 cursor-pointer rounded-full border border-secondary/30 bg-white text-secondary shadow-[0_10px_25px_rgba(0,0,0,0.15)] backdrop-blur transition hover:scale-105 hover:shadow-[0_16px_30px_rgba(0,0,0,0.18)]"
+                  className="group h-11 w-11 cursor-pointer rounded-full border border-secondary/30 bg-white text-secondary backdrop-blur transition hover:scale-105"
                 >
                   <span className="sr-only">Next</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="mx-auto">
                     <path d="M9 5L17 12L9 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </button>
-              </div>
-            ) : null}
-            {isMobile && !showAllMobile && filteredProjects.length > visibleProjects.length ? (
-              <div className="mt-6 flex justify-center">
-                <button
-                  type="button"
-                  onClick={() => setShowAllMobile(true)}
-                  className="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-2 text-sm font-semibold text-white"
-                >
-                  View All Projects
                 </button>
               </div>
             ) : null}
