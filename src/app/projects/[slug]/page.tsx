@@ -56,10 +56,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const galleryImages =
-    project.images?.filter((src) => src !== project.image) ??
-    (project.image ? [project.image] : []);
-  const gallerySources = galleryImages.length ? galleryImages : [project.image];
+  const gallerySources = project.images?.length ? project.images : [project.image];
 
   return (
     <>
@@ -134,16 +131,19 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     {gallerySources.map((src, index) => {
                       const total = gallerySources.length;
                       const isLast = index === gallerySources.length - 1;
-                      const tileClass =
-                        total === 1
-                          ? "sm:col-span-2 sm:row-span-2"
-                          : total <= 3
-                            ? isLast
-                              ? "sm:col-span-2 sm:row-span-2"
-                              : "sm:col-span-1 sm:row-span-1"
-                            : isLast
-                              ? "sm:col-span-2 sm:row-span-2"
-                              : tileClasses[index % tileClasses.length];
+                      const tileClass = total === 1
+                        ? "sm:col-span-2 sm:row-span-2"
+                        : total >= 3
+                          ? index === 0
+                            ? "sm:col-span-1 sm:row-span-2"
+                            : index === 1 || index === 2
+                              ? "sm:col-span-1 sm:row-span-1"
+                              : isLast
+                                ? "sm:col-span-2 sm:row-span-2"
+                                : "sm:col-span-1 sm:row-span-1"
+                          : isLast
+                            ? "sm:col-span-2 sm:row-span-2"
+                            : "sm:col-span-1 sm:row-span-1";
                       return (
                         <div
                           key={`${src}-${index}`}
@@ -156,11 +156,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                             className="object-cover"
                           />
-                          {index === 0 ? (
-                            <div className="absolute left-4 top-4 rounded-full border border-white/50 bg-white/70 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-secondary/70">
-                              {project.feedLabel ?? "Project Feed"}
-                            </div>
-                          ) : null}
                         </div>
                       );
                     })}

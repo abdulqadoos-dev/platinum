@@ -113,6 +113,8 @@ export const projectItems: ProjectCard[] = [
       "/projects/CN Rail – MSA contract 2025/11.jpg",
       "/projects/CN Rail – MSA contract 2025/12.jpg",
       "/projects/CN Rail – MSA contract 2025/14.jpg",
+      "/projects/CN Rail – MSA contract 2025/15.jpg",
+      "/projects/CN Rail – MSA contract 2025/16.jpg",
     ],
     slug: "cn-rail-msa-2025-program",
     tags: ["Support Crews", "Welding", "Surfacing"],
