@@ -63,12 +63,12 @@ const LocationIcon = () => (
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-secondary text-white px-6 sm:px-8 lg:px-24 py-16 sm:py-20">
+    <footer id="footer" className="bg-secondary text-white px-6 py-14 sm:px-8 sm:py-16 lg:px-24">
       <div className="mx-auto max-w-6xl xl:max-w-7xl">
 
-        <div className="grid gap-10 lg:grid-cols-4 text-left">
+        <div className="grid gap-8 lg:grid-cols-4 text-left">
           
-          <div className="space-y-6 lg:col-span-1 items-start text-left flex flex-col lg:items-center lg:text-center">
+          <div className="space-y-4 lg:col-span-1 items-start text-left flex flex-col lg:items-center lg:text-center">
             <Image
               src="/logo-white.png"
               alt="Platinum Track logo"
@@ -81,7 +81,7 @@ export default function Footer() {
               href="/5.3-Accessibility-Policy.pdf"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex border border-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-[#0E0F47] transition mt-2"
+              className="inline-flex border border-white px-5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] hover:bg-white hover:text-[#0E0F47] transition mt-1"
             >
               Accessibility Policy
             </a>
@@ -90,14 +90,14 @@ export default function Footer() {
 
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-            <h2 className="text-lg md:text-2xl font-semibold leading-snug col-span-1 sm:col-span-2 lg:col-span-4">
+            <h2 className="text-base md:text-xl font-semibold leading-snug col-span-1 sm:col-span-2 lg:col-span-4 text-white/90">
               Platinum Track Rail Services Has A Management Team With Over 40 Years Of Experience And Spanning Three Generations.
             </h2>
 
 
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="font-bold text-xl mb-4">Our Equipments</h3>
-              <ul className="space-y-2 text-base text-white/90">
+              <h3 className="font-bold text-lg mb-3">Our Equipments</h3>
+              <ul className="space-y-1.5 text-sm text-white/85">
                 {equipmentItems.map((item) => (
                   <li key={item.slug}>
                     <Link href={`/equipment?item=${item.slug}`} className="hover:text-white transition">
@@ -108,8 +108,8 @@ export default function Footer() {
               </ul>
             </div>
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="font-bold text-xl mb-4">Our Services</h3>
-              <ul className="space-y-2 text-base text-white/90">
+              <h3 className="font-bold text-lg mb-3">Our Services</h3>
+              <ul className="space-y-1.5 text-sm text-white/85">
                 {serviceItems.map((item) => (
                   <li key={item.slug}>
                     <Link href={`/services/${item.slug}`} className="hover:text-white transition">
@@ -122,14 +122,14 @@ export default function Footer() {
 
 
 
-            <div className="space-y-6 col-span-1 sm:col-span-2 lg:col-span-2">
-              <h3 className="font-bold text-xl">Contact Us</h3>
+            <div className="space-y-5 col-span-1 sm:col-span-2 lg:col-span-2">
+              <h3 className="font-bold text-lg">Contact Us</h3>
 
               <div className="flex items-start space-x-4">
                 <PhoneIcon />
                 <div>
                   <p className="font-semibold text-white">Call Us 24/7</p>
-                  <a href="tel:+19057727272" className="text-gray-300 text-base hover:text-white transition">
+                  <a href="tel:+19057727272" className="text-white/70 text-sm hover:text-white transition">
                     +1 905 772-7272
                   </a>
                 </div>
@@ -141,7 +141,7 @@ export default function Footer() {
                   <p className="font-semibold text-white">Send Us Mail</p>
                   <a
                     href="mailto:info@platinumtrack.ca"
-                    className="text-gray-300 text-base hover:text-white transition"
+                    className="text-white/70 text-sm hover:text-white transition"
                   >
                     info@platinumtrack.ca
                   </a>
@@ -152,7 +152,7 @@ export default function Footer() {
                 <LocationIcon />
                 <div>
                   <p className="font-semibold text-white">851 Haldimand</p>
-                  <p className="text-gray-300 text-base">
+                  <p className="text-white/70 text-sm">
                     Hwy#56 RR#1, York, ON
                     <br />
                     N0A 1R0
@@ -163,7 +163,6 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-full flex mt-16"></div>
       </div>
     </footer>
   );
