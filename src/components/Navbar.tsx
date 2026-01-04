@@ -19,14 +19,14 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8 text-secondary font-medium text-sm">
           {[
-            { label: "Services", href: "/#services" },
             { label: "About Us", href: "/#about" },
+            { label: "Services", href: "/#services" },
             { label: "Projects", href: "/#projects" },
-            { label: "Safety", href: "/#safety" },
             { label: "Equipments", href: "/#equipments" },
+            { label: "Safety", href: "/#safety" },
             { label: "Indigenous Engagement", href: "/indigenous-engagement" },
-            { label: "Contact Us", href: "/#contact" },
             { label: "Careers", href: "/#careers" },
+            { label: "Contact Us", href: "/#contact" },
           ].map((item) => (
             <a
               key={item.label}
@@ -99,13 +99,14 @@ export default function Navbar() {
           <nav className="flex flex-col ">
             {[
               { label: "Home", href: "/#home" },
-              { label: "Services", href: "/#services" },
               { label: "About Us", href: "/#about" },
+              { label: "Services", href: "/#services" },
               { label: "Projects", href: "/#projects" },
-              { label: "Indigenous Engagement", href: "/indigenous-engagement" },
               { label: "Equipments", href: "/#equipments" },
               { label: "Safety", href: "/#safety" },
+              { label: "Indigenous Engagement", href: "/indigenous-engagement" },
               { label: "Careers", href: "/#careers" },
+              { label: "Contact Us", href: "/#contact" },
             ].map((item) => (
               <a
                 key={item.label}

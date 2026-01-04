@@ -92,9 +92,9 @@ export default function Careers() {
                     key={job.title}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`w-full rounded-xl border px-4 py-3 text-left transition ${
+                    className={`w-full rounded-xl border px-4 py-3 text-left transition shadow-none ${
                       isActive
-                        ? "border-primary/40 bg-primary/10 text-primary shadow-[0_8px_24px_rgba(168,31,39,0.2)]"
+                        ? "border-primary/40 bg-primary/10 text-primary"
                         : "border-secondary/10 bg-white text-secondary hover:border-primary/30 hover:bg-primary/5"
                     }`}
                   >

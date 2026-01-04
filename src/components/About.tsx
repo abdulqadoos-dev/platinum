@@ -60,6 +60,15 @@ const people = [
     tag: "Finance",
   },
   {
+    name: "Manprit Nijjar",
+    role: "Controller",
+    image: "/peoples/Manprit%20Nijjar%20-%20Controller.jpeg",
+    bio:
+      "Oversees accounting, reporting, and internal controls to support informed decision-making.",
+    linkedin: "https://www.linkedin.com/",
+    tag: "Finance",
+  },
+  {
     name: "Krissy Stephenson",
     role: "Administrative Assistant",
     image: "/peoples/Krissy%20Stephenson%20-%20Administrative%20Assistant.jpg",
@@ -95,15 +104,7 @@ const people = [
     linkedin: "https://www.linkedin.com/",
     tag: "Fleet",
   },
-  {
-    name: "Manprit Nijjar",
-    role: "Controller",
-    image: "/peoples/Manprit%20Nijjar%20-%20Controller.jpeg",
-    bio:
-      "Oversees accounting, reporting, and internal controls to support informed decision-making.",
-    linkedin: "https://www.linkedin.com/",
-    tag: "Finance",
-  },
+  
   {
     name: "Martina Bellemore",
     role: "Assistant Controller",
@@ -172,6 +173,7 @@ export default function About() {
     "Michael Sousa",
     "Jim Violin",
     "Rick Haggart",
+    "Nick Nielsen",
   ]);
 
   const visiblePeople = activeTab === "key"

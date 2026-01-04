@@ -1,13 +1,28 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Safety() {
-  const items = [
-    { label: "Compliance" },
-    { label: "Safety Programs" },
-    { label: "Third Party Verification" },
+  const safetyLogos = [
+    { src: "/safety/1.jpeg", alt: "Safety certification logo" },
+    { src: "/safety/2.jpeg", alt: "Safety certification logo" },
+    { src: "/safety/3.jpeg", alt: "Safety certification logo" },
+    { src: "/safety/4.jpeg", alt: "Safety certification logo" },
   ];
+
+  const logoMap: Record<string, number[]> = {
+    Compliance: [2, 3],
+    "Safety Programs": [0],
+    "Third Party Verification": [2, 1],
+  };
+
+  const [activeLabel, setActiveLabel] = useState<string | null>(null);
+
+  const activeLogos = activeLabel
+    ? logoMap[activeLabel]?.map((index) => safetyLogos[index]).filter(Boolean)
+    : [];
 
   const boxes = [
     {
@@ -179,13 +194,18 @@ export default function Safety() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           >
-            {items.map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
+            {Object.keys(logoMap).map((label) => (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setActiveLabel(label)}
+                className="flex items-center gap-3 text-left text-secondary transition hover:text-primary cursor-pointer"
+              >
                 <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_rgba(168,31,39,0.5)]"></span>
-                <span className="text-primary font-semibold text-sm md:text-base uppercase tracking-[0.2em]">
-                  {item.label}
+                <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-[0.2em]">
+                  {label}
                 </span>
-              </div>
+              </button>
             ))}
           </motion.div>
 
@@ -200,7 +220,7 @@ export default function Safety() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-60" />
               <p className="relative text-white text-sm md:text-base font-semibold leading-relaxed md:leading-6">
-                Our clients can trust that we meet all safety training, certification, and third-party verification standards. Our goal is to be the safest rail service provider in the U.S. We emphasize safety daily, fostering a team approach and empowering employees to prioritize it, creating a positive safety culture.
+                Our clients can trust that we meet all safety training, certification, and third-party verification standards. Our goal is to be the safest rail service provider in North America. We emphasize safety daily, fostering a team approach and empowering employees to prioritize it, creating a positive safety culture.
               </p>
             </motion.div>
 
@@ -253,6 +273,44 @@ export default function Safety() {
         </div>
 
       </div>
+
+      {activeLabel ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 backdrop-blur-sm">
+          <div className="relative w-full max-w-xl rounded-2xl bg-white p-6 shadow-[0_24px_60px_rgba(18,19,21,0.3)]">
+            <button
+              type="button"
+              onClick={() => setActiveLabel(null)}
+              className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/15 text-secondary transition hover:border-primary hover:text-primary cursor-pointer"
+              aria-label="Close"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 6l12 12M18 6l-12 12" />
+              </svg>
+            </button>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary/60">
+              {activeLabel}
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {activeLogos.map((logo) => (
+                <div
+                  key={logo?.src}
+                  className="flex items-center justify-center rounded-xl border border-secondary/10 bg-white p-5"
+                >
+                  {logo ? (
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={160}
+                      height={100}
+                      className="h-24 w-auto object-contain"
+                    />
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

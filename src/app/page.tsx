@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import About from "@/components/About";
+import Services from "@/components/Services";
 import Equipments from "@/components/Equipments";
 import GetInTouch from "@/components/GetInTouch";
 import Careers from "@/components/Careers";
@@ -14,13 +14,13 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Services />
       <About />
+      <Services />
       <Projects />
-      <Safety />
       <Equipments />
-      <GetInTouch />
+      <Safety />
       <Careers />
+      <GetInTouch />
       <Footer />
     </>
   );
