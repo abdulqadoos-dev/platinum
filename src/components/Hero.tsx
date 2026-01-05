@@ -1,29 +1,46 @@
 "use client";
 
-
+import { useEffect, useRef } from "react";
 const partners = [
   { id: 1, src: "/partners/gfc.png", alt: "GFC Partner" },
   { id: 2, src: "/partners/ls.png", alt: "LS Partner" },
 ];
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const startVideo = () => {
+      video.src = "/platinum-track-optimized.mp4";
+      video.load();
+      video.play().catch(() => undefined);
+    };
+
+    if ("requestIdleCallback" in window) {
+      const id = window.requestIdleCallback(startVideo);
+      return () => window.cancelIdleCallback(id);
+    }
+
+    const timeout = window.setTimeout(startVideo, 0);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
   return (
     <section id="home" className="relative w-full h-[calc(100vh-96px)] overflow-hidden bg-white">
       {/* Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
         poster="/platinum-track-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source
-          src="/platinum-track-optimized.mp4"
-          type="video/mp4"
-        />
-      </video>
+      />
 
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-transparent"></div>
 
