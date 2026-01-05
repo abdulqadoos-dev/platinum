@@ -16,11 +16,11 @@ export default function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster="/platinum-video-poster.jpg"
+        poster="/platinum-track-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="/platinum-video-optimized.mp4"
+          src="/platinum-track-optimized.mp4"
           type="video/mp4"
         />
       </video>

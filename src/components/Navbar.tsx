@@ -12,7 +12,7 @@ export default function Navbar() {
       <header className="sticky top-0 left-0 w-full z-50 py-6 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-white via-white/75 to-transparent backdrop-blur-xs">
         <div className="flex items-center justify-between">
         {/* Logo */}
-        <a className="flex items-center " href="/#home" >
+        <a className="flex items-center " href="/" >
           <Image src="/logo.png" width={140} height={45} alt="Platinum Track Services Logo" className="w-28 sm:w-32 lg:w-[140px] h-auto" priority />
         </a>
 
