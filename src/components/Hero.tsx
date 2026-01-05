@@ -24,8 +24,8 @@ export default function Hero() {
       return () => window.cancelIdleCallback(id);
     }
 
-    const timeout = window.setTimeout(startVideo, 0);
-    return () => window.clearTimeout(timeout);
+    const timeout = setTimeout(startVideo, 0);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
