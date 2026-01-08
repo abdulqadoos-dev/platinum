@@ -49,18 +49,18 @@ export default function Hero() {
 
         <div className="flex flex-col w-full gap-4">
           <div className="relative">
-            <h1 className="origin-left scale-x-90 text-3xl sm:text-4xl md:text-5xl lg:text-[clamp(2.6rem,5.2vw,4.8rem)] text-primary font-black uppercase tracking-[0.09em] leading-[0.9]">
-              Railway
+            <h1 className="origin-left scale-x-90 text-3xl sm:text-4xl md:text-5xl lg:text-[clamp(2.7rem,5.6vw,5rem)] text-primary font-black uppercase tracking-[0.09em] leading-[0.9]">
+              Platinum Track
             </h1>
             <div className="mt-4 inline-block rounded-lg bg-secondary px-3 sm:px-4 py-2 shadow-[0_18px_40px_rgba(22,19,74,0.25)]">
-              <span className="text-white text-xl sm:text-3xl md:text-4xl lg:text-[clamp(2.2rem,4.2vw,4.4rem)] font-black uppercase tracking-[0.22em] sm:tracking-[0.28em]">
-                Construction
+              <span className="text-white text-base sm:text-xl md:text-2xl lg:text-[clamp(1.7rem,3.2vw,3.4rem)] font-black uppercase tracking-[0.22em] sm:tracking-[0.28em]">
+                Services INC
               </span>
             </div>
           </div>
           <div className="flex flex-col gap-2 text-secondary/80">
             <span className="text-sm sm:text-base uppercase tracking-[0.5em] font-semibold">
-              You can trust
+              Railway Construciont <br /> You can trust
             </span>
             <span className="h-[1px] w-44 sm:w-56 bg-gradient-to-r from-secondary/100 via-secondary/10 to-transparent" />
           </div>
