@@ -16,5 +16,5 @@ export const equipmentImageMeta = {
   "hirail-truck": { width: 1024, height: 576, orientation: "landscape" },
   "hirail-grapple-truck": { width: 2048, height: 1152, orientation: "landscape" },
   "ballast-regulator": { width: 2048, height: 1152, orientation: "landscape" },
-  "track-stabalizer": { width: 2048, height: 1152, orientation: "landscape" },
+  "track-stabilizer": { width: 2048, height: 1152, orientation: "landscape" },
 } as const;

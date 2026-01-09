@@ -186,10 +186,10 @@ export const equipmentCards: EquipmentCard[] = [
     ),
   },
   {
-    title: "Track Stabalizer",
+    title: "Track Stabilizer",
     image: "/equipments/Stabilizer-2.jpg",
-    slug: "track-stabalizer",
-    detailImage: "/equipments/Stabalizer-3.jpg",
+    slug: "track-stabilizer",
+    detailImage: "/equipments/Stabilizer-3.jpg",
     detailContent: (
       <div className="space-y-4 text-base text-secondary">
         <p>A railway track stabilizer is an essential machine designed to maintain the geometry of railway tracks. The dynamic track stabilizer operates by using horizontal oscillations and vertical load to effectively rearrange ballast stones, lowering the track into the ballast bed. This process enhances the stability of the track, increases resistance to lateral displacement, and extends the intervals between maintenance. The benefits of using a railway track stabilizer include:</p>
@@ -205,7 +205,7 @@ export const equipmentCards: EquipmentCard[] = [
     title: "Ballast Regulator",
     image: "/equipments/grader-scaled.jpg",
     slug: "ballast-regulator",
-    detailImage: "/equipments/Stabalizer-3.jpg",
+    detailImage: "/equipments/Stabilizer-3.jpg",
     detailContent: (
       <div className="space-y-4 text-base text-secondary">
         <p>A ballast regulator is essential for maintaining proper track stability and alignment. It grades and shapes the track ballast, which is the crushed stone that supports and stabilizes railroad ties. By distributing and levelling the ballast, the regulator ensures that the track bed remains evenly supported, preventing uneven wear and maintaining track alignment. This equipment is crucial for adjusting the track's elevation and camber, improving the overall safety and performance of rail operations. Platinum Track utilizes advanced ballast regulators to keep your tracks in optimal condition, enhancing both operational efficiency and safety.</p>

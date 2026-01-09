@@ -126,7 +126,7 @@ export default function Equipments() {
 
             <motion.button
               type="button"
-              onClick={() => setActiveSlug("track-stabalizer")}
+              onClick={() => setActiveSlug("track-stabilizer")}
               className="relative h-[228px] w-full rounded-2xl overflow-hidden group block text-left"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}

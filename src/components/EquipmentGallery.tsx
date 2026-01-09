@@ -25,7 +25,7 @@ const tallSlugs = new Set([
 ]);
 
 const getCardClass = (slug: string) => {
-  if (slug === "track-stabalizer") {
+  if (slug === "track-stabilizer") {
     return "sm:col-span-2 sm:row-span-2 lg:col-span-3 xl:col-span-4";
   }
   if (slug === "hirail-truck") {
